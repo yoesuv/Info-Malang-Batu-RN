@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, Image } from 'react-native';
+import {Platform} from 'react-native';
 
-import { createBottomTabNavigator, createAppContainer } from "react-navigation";
+import { createBottomTabNavigator, createStackNavigator, createAppContainer } from "react-navigation";
 
-import LisPlaceScreen from './src/screens/listplace/ListPlace';
+import ListPlaceScreen from './src/screens/listplace/ListPlace';
+import DetailListPlaceScreen from './src/screens/listplace/DetailListPlace';
 import GalleryScreen from './src/screens/gallery/Gallery';
 import MapScreen from './src/screens/maps/MapLocation';
 import AboutScreen from './src/screens/about/About';
@@ -15,9 +16,25 @@ import iconGallery from './src/images/ic_menu_gallery.png';
 import iconMaps from './src/images/ic_menu_maps.png';
 import iconOther from './src/images/ic_menu_other.png';
 
+import { THEME_COLOR } from './src/data/Constants';
+
+const ListStack = createStackNavigator({
+    ListHome: {
+        screen : ListPlaceScreen,
+        navigationOptions: {
+            title: 'List Place',
+            headerTintColor: '#FFFFFF',
+            headerStyle: {
+                backgroundColor: THEME_COLOR
+            }
+        }
+    },
+    DetailsList: DetailListPlaceScreen
+});
+
 let TabNavigator = createBottomTabNavigator(
     {
-        List: LisPlaceScreen,
+        List: ListStack,
         Gallery: GalleryScreen,
         Map: MapScreen,
         About: AboutScreen
@@ -37,8 +54,8 @@ let TabNavigator = createBottomTabNavigator(
                 },
         }),
         tabBarOptions: {
-            activeTintColor: '#009688',
-            inactiveTintColor: '#009688',
+            activeTintColor: THEME_COLOR
+            //inactiveTintColor: '#009688',
         }
     }
 );
@@ -52,10 +69,3 @@ export default class App extends React.Component {
         )
     }
 }
-
-const styles = StyleSheet.create({
-    icon: {
-        height: 24,
-        width: 24
-    }
-});
