@@ -3,10 +3,10 @@ import {Platform, StyleSheet, Text, View} from 'react-native';
 
 import { createBottomTabNavigator, createAppContainer } from "react-navigation";
 
-import LisPlaceScreen from './src/screens/ListPlace';
-import GalleryScreen from './src/screens/Gallery';
-import MapScreen from './src/screens/MapLocation';
-import AboutScreen from './src/screens/About';
+import LisPlaceScreen from './src/screens/listplace/ListPlace';
+import GalleryScreen from './src/screens/gallery/Gallery';
+import MapScreen from './src/screens/maps/MapLocation';
+import AboutScreen from './src/screens/about/About';
 
 let TabNavigator = createBottomTabNavigator({
     List: LisPlaceScreen,
