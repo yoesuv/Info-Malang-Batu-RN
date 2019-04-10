@@ -1,1 +1,1 @@
-export { getData } from from './myApplicationData';
+export { getListPlace } from './myApplicationData';
