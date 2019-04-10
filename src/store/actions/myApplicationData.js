@@ -1,4 +1,4 @@
-import { SET_LIST_PLACE } from './actionTypes';
+import { SET_LIST_PLACE, SET_GALLERY } from './actionTypes';
 import { BASE_URL } from '../../data/Constants';
 
 export const getListPlace = () => {
@@ -18,3 +18,21 @@ export const setListPlace = places => {
             places: places
         }
 };
+
+export const getGallery = () => {
+    return dispatch => {
+        fetch(BASE_URL+"Gallery_Malang_Batu.json")
+        .then((response) => response.json())
+        .then((responseJson) => dispatch(setGallery(responseJson)))
+        .catch((err) => {
+            console.log(err);
+        });
+    };
+}
+
+export const setGallery = galleries => {
+    return {
+        type: SET_GALLERY,
+        galleries: galleries
+    }
+}

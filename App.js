@@ -7,6 +7,7 @@ import { createBottomTabNavigator, createStackNavigator, createAppContainer } fr
 import ListPlaceScreen from './src/screens/listplace/ListPlace';
 import DetailListPlaceScreen from './src/screens/listplace/DetailListPlace';
 import GalleryScreen from './src/screens/gallery/Gallery';
+import DetailGalleryScreen from './src/screens/gallery/DetailGallery';
 import MapScreen from './src/screens/maps/MapLocation';
 import AboutScreen from './src/screens/about/About';
 
@@ -36,10 +37,24 @@ const ListStack = createStackNavigator({
     DetailsList: DetailListPlaceScreen
 });
 
+const GalleryStack = createStackNavigator({
+    GalleryHome: {
+        screen : GalleryScreen,
+        navigationOptions: {
+            title: 'Gallery',
+            headerTintColor: '#FFFFFF',
+            headerStyle: {
+                backgroundColor: THEME_COLOR
+            }
+        }
+    },
+    DetailGallery: DetailGalleryScreen
+});
+
 let TabNavigator = createBottomTabNavigator(
     {
         List: ListStack,
-        Gallery: GalleryScreen,
+        Gallery: GalleryStack,
         Map: MapScreen,
         About: AboutScreen
     },{
