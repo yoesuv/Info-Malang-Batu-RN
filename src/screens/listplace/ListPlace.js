@@ -12,17 +12,23 @@ class ListPlaceScreen extends React.Component {
         this.props.onGetListPlace();
     }
 
+    selectedDataHandler = index => {
+        const selectedPlace = this.props.places[index];
+        this.props.navigation.navigate('DetailsList', {selectedPlace});
+    }
+
     render () {
         return (
             <View>
             <FlatList
                 data={this.props.places}
                 renderItem={
-                    ({item}) => (
+                    ({item, index}) => (
                         <ItemPlace
                             name={item.nama}
                             location={item.lokasi}
-                            image={item.gambar}/>
+                            image={item.gambar}
+                            onItemPressed={() => this.selectedDataHandler(index)}/>
                     )
                 }
                 keyExtractor={(item, index) => index.toString()}

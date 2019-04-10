@@ -34,7 +34,16 @@ const ListStack = createStackNavigator({
             }
         }
     },
-    DetailsList: DetailListPlaceScreen
+    DetailsList: {
+        screen: DetailListPlaceScreen,
+        navigationOptions: {
+            title: 'Detail List Place',
+            headerTintColor: '#FFFFFF',
+            headerStyle: {
+                backgroundColor: THEME_COLOR
+            }
+        }
+    }
 });
 
 const GalleryStack = createStackNavigator({
