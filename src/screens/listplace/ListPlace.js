@@ -1,8 +1,10 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, FlatList, StyleSheet } from "react-native";
 import { connect } from 'react-redux';
 
 import { getListPlace } from '../../store/actions/index';
+
+import ItemPlace from '../../components/ItemPlace';
 
 class ListPlaceScreen extends React.Component {
 
@@ -13,7 +15,18 @@ class ListPlaceScreen extends React.Component {
     render () {
         return (
             <View>
-                <Text>List Place</Text>
+            <FlatList
+                data={this.props.places}
+                renderItem={
+                    ({item}) => (
+                        <ItemPlace
+                            name={item.nama}
+                            location={item.lokasi}
+                            image={item.gambar}/>
+                    )
+                }
+                keyExtractor={(item, index) => index.toString()}
+            />
             </View>
         )
     }
