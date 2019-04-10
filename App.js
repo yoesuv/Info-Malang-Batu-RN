@@ -69,12 +69,27 @@ const GalleryStack = createStackNavigator({
     }
 });
 
+const AboutStack = createStackNavigator({
+    Other: {
+        screen: AboutScreen,
+        navigationOptions: {
+            title: 'Other',
+            headerTintColor: '#FFFFFF',
+            headerStyle: {
+                backgroundColor: THEME_COLOR,
+                elevation: 0,
+                shadowOpacity: 0
+            }
+        }
+    }
+});
+
 let TabNavigator = createBottomTabNavigator(
     {
         List: ListStack,
         Gallery: GalleryStack,
         Map: MapScreen,
-        About: AboutScreen
+        About: AboutStack
     },{
         initialRouteName: 'List',
         defaultNavigationOptions: ({ navigation }) => ({
