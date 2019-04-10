@@ -1,16 +1,20 @@
 import React from 'react';
-import { View, Text, ImageBackground, StyleSheet } from 'react-native';
+import { View, Text, ImageBackground, TouchableOpacity, StyleSheet } from 'react-native';
+
+
 
 const itemPlace = (props) => {
         console.log(props)
-        return <View style={styles.container}>
-                    <ImageBackground source={{ uri: props.image }} style={styles.image}>
-                        <View style={styles.textContainer}>
-                            <Text style={styles.title}>{ props.name }</Text>
-                            <Text style={styles.location}>{ props.location }</Text>
-                        </View>
-                    </ImageBackground>
-                </View>
+        return <TouchableOpacity onPress={props.onItemPressed}>
+                    <View style={styles.container}>
+                        <ImageBackground source={{ uri: props.image }} style={styles.image}>
+                            <View style={styles.textContainer}>
+                                <Text style={styles.title}>{ props.name }</Text>
+                                <Text style={styles.location}>{ props.location }</Text>
+                            </View>
+                        </ImageBackground>
+                    </View>
+                </TouchableOpacity>
 };
 
 const styles = StyleSheet.create({
