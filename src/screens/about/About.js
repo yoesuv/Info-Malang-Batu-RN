@@ -4,6 +4,11 @@ import {PagerTabIndicator, IndicatorViewPager, PagerTitleIndicator, PagerDotIndi
 
 import { THEME_COLOR } from '../../data/Constants';
 
+import InformationScreen from './Information';
+import ChangelogScreen from './Changelog';
+import ThanksScreen from './Thanks';
+import LibrariesScreen from './Libraries';
+
 class AboutScreen extends React.Component {
 
     renderTab() {
@@ -26,18 +31,17 @@ class AboutScreen extends React.Component {
                     style={styles.viewPagerContainer}
                     initialPage={0}
                     indicator={this.renderTab()}>
-
                         <View>
-                            <Text>page one</Text>
+                            <InformationScreen />
                         </View>
                         <View>
-                            <Text>page two</Text>
+                            <ChangelogScreen />
                         </View>
                         <View>
-                            <Text>page three</Text>
+                            <ThanksScreen />
                         </View>
                         <View>
-                            <Text>page four</Text>
+                            <LibrariesScreen />
                         </View>
 
                 </IndicatorViewPager>
