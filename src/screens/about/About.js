@@ -9,7 +9,12 @@ class AboutScreen extends React.Component {
     renderTab() {
          return (
              <PagerTitleIndicator
-                 titles={['Information', 'Changelog','Thanks','Libraries']}
+                style={styles.indicatorContainer}
+                trackScroll={true}
+                itemTextStyle={styles.indicatorText}
+                selectedItemTextStyle={styles.indicatorSelectedText}
+                selectedBorderStyle={styles.selectedBorderStyle}
+                titles={['Information', 'Changelog','Thanks','Libraries']}
              />
          )
    }
@@ -46,6 +51,21 @@ const styles = StyleSheet.create({
     viewPagerContainer: {
         flex:1,
         flexDirection: 'column-reverse',
+    },
+    indicatorContainer: {
+        backgroundColor: THEME_COLOR
+    },
+    indicatorText: {
+        fontSize: 14,
+        color: 0xFFFFFF99
+    },
+    indicatorSelectedText: {
+        fontSize: 14,
+        color: 0xFFFFFFFF
+    },
+    selectedBorderStyle: {
+        height: 3,
+        backgroundColor: 'white'
     }
 })
 
