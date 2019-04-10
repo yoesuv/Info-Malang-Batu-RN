@@ -57,7 +57,16 @@ const GalleryStack = createStackNavigator({
             }
         }
     },
-    DetailGallery: DetailGalleryScreen
+    DetailGallery: {
+        screen: DetailGalleryScreen,
+        navigationOptions: {
+            title: 'Detail Gallery',
+            headerTintColor: '#FFFFFF',
+            headerStyle: {
+                backgroundColor: THEME_COLOR
+            }
+        }
+    }
 });
 
 let TabNavigator = createBottomTabNavigator(

@@ -12,15 +12,21 @@ class GalleryScreen extends React.Component {
         this.props.onGetGallery();
     }
 
+    selectedDataHandler = index => {
+        const selectedGallery = this.props.galleries[index];
+        this.props.navigation.navigate('DetailGallery', {selectedGallery});
+    }
+
     render () {
         return (
             <View>
             <FlatList
                 data={this.props.galleries}
                 renderItem={
-                    ({item}) => (
+                    ({item, index}) => (
                         <ItemGallery
-                            image={item.thumbnail}/>
+                            image={item.thumbnail}
+                            onItemPressed={() => this.selectedDataHandler(index)}/>
                     )
                 }
                 numColumns={3}
