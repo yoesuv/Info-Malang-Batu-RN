@@ -46,6 +46,17 @@ const ListStack = createStackNavigator({
     }
 });
 
+ListStack.navigationOptions = ({ navigation }) => {
+    let tabBarVisible = true;
+    if (navigation.state.index > 0) {
+        tabBarVisible = false;
+    }
+
+    return {
+        tabBarVisible,
+    };
+};
+
 const GalleryStack = createStackNavigator({
     GalleryHome: {
         screen : GalleryScreen,
@@ -68,6 +79,17 @@ const GalleryStack = createStackNavigator({
         }
     }
 });
+
+GalleryStack.navigationOptions = ({ navigation }) => {
+    let tabBarVisible = true;
+    if (navigation.state.index > 0) {
+        tabBarVisible = false;
+    }
+
+    return {
+        tabBarVisible,
+    };
+};
 
 const AboutStack = createStackNavigator({
     Other: {
@@ -107,7 +129,6 @@ let TabNavigator = createBottomTabNavigator(
         }),
         tabBarOptions: {
             activeTintColor: THEME_COLOR
-            //inactiveTintColor: '#009688',
         }
     }
 );
