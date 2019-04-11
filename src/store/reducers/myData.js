@@ -1,8 +1,9 @@
-import { SET_LIST_PLACE, SET_GALLERY } from '../actions/actionTypes';
+import { SET_LIST_PLACE, SET_GALLERY, SET_MAP_PINS } from '../actions/actionTypes';
 
 const initialState = {
     places: [],
-    galleries: []
+    galleries: [],
+    pins: []
 }
 
 const reducer = (state = initialState, action) => {
@@ -16,6 +17,11 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 galleries: action.galleries
+            }
+        case SET_MAP_PINS:
+            return {
+                ...state,
+                pins: action.pins
             }
         default:
             return state;

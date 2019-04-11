@@ -1,1 +1,1 @@
-export { getListPlace, getGallery } from './myApplicationData';
+export { getListPlace, getGallery, getPins } from './myApplicationData';

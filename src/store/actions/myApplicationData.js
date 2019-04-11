@@ -1,4 +1,4 @@
-import { SET_LIST_PLACE, SET_GALLERY } from './actionTypes';
+import { SET_LIST_PLACE, SET_GALLERY, SET_MAP_PINS } from './actionTypes';
 import { BASE_URL } from '../../data/Constants';
 
 export const getListPlace = () => {
@@ -34,5 +34,23 @@ export const setGallery = galleries => {
     return {
         type: SET_GALLERY,
         galleries: galleries
+    }
+}
+
+export const getPins = () => {
+    return dispatch => {
+        fetch(BASE_URL+"Maps_Malang_Batu.json")
+        .then((response) => response.json())
+        .then((responseJson) => dispatch(setPins(responseJson)))
+        .catch((err) => {
+            console.log(err);
+        });
+    };
+}
+
+export const setPins = pins => {
+    return {
+        type: SET_MAP_PINS,
+        pins: pins
     }
 }

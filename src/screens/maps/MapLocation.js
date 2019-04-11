@@ -1,9 +1,16 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
+import { connect } from 'react-redux';
 
 import MapView from 'react-native-maps';
 
+import { getPins } from '../../store/actions/index';
+
 class MapLocationScreen extends React.Component {
+
+    componentDidMount() {
+        this.props.onGetPins();
+    }
 
     render () {
         return (
@@ -33,4 +40,16 @@ const styles = StyleSheet.create({
     }
 });
 
-export default MapLocationScreen;
+const mapStateToProps = state => {
+    return {
+        pins: state.dataConfigure.pins
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        onGetPins: () => dispatch(getPins())
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(MapLocationScreen);
