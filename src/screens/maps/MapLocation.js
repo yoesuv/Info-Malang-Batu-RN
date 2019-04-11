@@ -1,12 +1,24 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, Image, TouchableOpacity, StyleSheet } from "react-native";
 import { connect } from 'react-redux';
 
 import MapView from 'react-native-maps';
 
 import { getPins } from '../../store/actions/index';
 
+import Icon from '../../components/Icon';
+
+import iconRefresh from '../../images/ic_action_refresh.png';
+
 class MapLocationScreen extends React.Component {
+
+    static navigationOptions = {
+        headerRight: (
+            <TouchableOpacity onPress={() => alert('This is a button!')}>
+                <Image source={iconRefresh} style={{ width:24, height:24, marginRight: 16 }}/>
+            </TouchableOpacity>
+        )
+    };
 
     componentDidMount() {
         this.props.onGetPins();
