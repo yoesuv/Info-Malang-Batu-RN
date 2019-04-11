@@ -91,6 +91,19 @@ GalleryStack.navigationOptions = ({ navigation }) => {
     };
 };
 
+const MapStack = createStackNavigator({
+    Other: {
+        screen: MapScreen,
+        navigationOptions: {
+            title: 'Maps',
+            headerTintColor: '#FFFFFF',
+            headerStyle: {
+                backgroundColor: THEME_COLOR
+            }
+        }
+    }
+});
+
 const AboutStack = createStackNavigator({
     Other: {
         screen: AboutScreen,
@@ -110,7 +123,7 @@ let TabNavigator = createBottomTabNavigator(
     {
         List: ListStack,
         Gallery: GalleryStack,
-        Map: MapScreen,
+        Map: MapStack,
         About: AboutStack
     },{
         initialRouteName: 'List',
