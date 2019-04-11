@@ -12,6 +12,15 @@ import iconRefresh from '../../images/ic_action_refresh.png';
 
 class MapLocationScreen extends React.Component {
 
+    state = {
+        focusedLocation: {
+            latitude: -7.982914,
+            longitude: 112.630875,
+            latitudeDelta: 0.85,
+            longitudeDelta: 0.85
+        }
+    }
+
     static navigationOptions = ({navigation}) => {
         const {params = {}} = navigation.state;
         return {
@@ -24,7 +33,11 @@ class MapLocationScreen extends React.Component {
     };
 
     actionRefresh = () => {
-        alert('action refresh');
+        this.map.animateToRegion({
+            ...this.state.focusedLocation,
+            latitude: -7.982914,
+            longitude: 112.630875
+        });
     }
 
     componentDidMount() {
@@ -36,12 +49,8 @@ class MapLocationScreen extends React.Component {
         return (
             <View style={styles.container}>
                 <MapView style={styles.mapContainer}
-                    initialRegion={{
-                      latitude: -7.982914,
-                      longitude: 112.630875,
-                      latitudeDelta: 0.85,
-                      longitudeDelta: 0.85,
-                    }}>
+                    initialRegion={this.state.focusedLocation}
+                    ref={ref => this.map = ref} >
                     {this.props.pins.map((marker, index) => (
                         <MapView.Marker
                             coordinate={{latitude: marker.latitude, longitude: marker.longitude}}
