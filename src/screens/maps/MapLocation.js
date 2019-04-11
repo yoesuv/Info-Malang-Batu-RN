@@ -19,10 +19,9 @@ class MapLocationScreen extends React.Component {
                     initialRegion={{
                       latitude: -7.982914,
                       longitude: 112.630875,
-                      latitudeDelta: 0.0922,
-                      longitudeDelta: 0.0421,
-                    }}
-                >
+                      latitudeDelta: 0.85,
+                      longitudeDelta: 0.85,
+                    }}>
                     {this.props.pins.map((marker, index) => (
                         <MapView.Marker
                             coordinate={{latitude: marker.latitude, longitude: marker.longitude}}
