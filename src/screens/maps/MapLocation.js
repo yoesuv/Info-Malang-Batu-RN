@@ -12,15 +12,23 @@ import iconRefresh from '../../images/ic_action_refresh.png';
 
 class MapLocationScreen extends React.Component {
 
-    static navigationOptions = {
-        headerRight: (
-            <TouchableOpacity onPress={() => alert('This is a button!')}>
-                <Image source={iconRefresh} style={{ width:24, height:24, marginRight: 16 }}/>
-            </TouchableOpacity>
-        )
+    static navigationOptions = ({navigation}) => {
+        const {params = {}} = navigation.state;
+        return {
+            headerRight: (
+                <TouchableOpacity onPress={() => params.handleRefresh()}>
+                    <Image source={iconRefresh} style={{ width:24, height:24, marginRight: 16 }}/>
+                </TouchableOpacity>
+            )
+        }
     };
 
+    actionRefresh = () => {
+        alert('action refresh');
+    }
+
     componentDidMount() {
+        this.props.navigation.setParams({ handleRefresh: this.actionRefresh });
         this.props.onGetPins();
     }
 
