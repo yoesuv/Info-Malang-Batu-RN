@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import MapView from 'react-native-maps';
 
 import { getPins } from '../../store/actions/index';
-
+import { DEFAULT_LATITUDE, DEFAULT_LONGITUDE } from '../../data/Constants';
 import Icon from '../../components/Icon';
 
 import iconRefresh from '../../images/ic_action_refresh.png';
@@ -14,8 +14,8 @@ class MapLocationScreen extends React.Component {
 
     state = {
         focusedLocation: {
-            latitude: -7.982914,
-            longitude: 112.630875,
+            latitude: DEFAULT_LATITUDE,
+            longitude: DEFAULT_LONGITUDE,
             latitudeDelta: 0.85,
             longitudeDelta: 0.85
         }
@@ -35,8 +35,8 @@ class MapLocationScreen extends React.Component {
     actionRefresh = () => {
         this.map.animateToRegion({
             ...this.state.focusedLocation,
-            latitude: -7.982914,
-            longitude: 112.630875
+            latitude: DEFAULT_LATITUDE,
+            longitude: DEFAULT_LONGITUDE
         });
     }
 
