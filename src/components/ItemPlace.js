@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, ImageBackground, TouchableOpacity, StyleSheet } from 'react-native';
 
-
+import AppTextBold from './AppTextBold';
 
 const itemPlace = (props) => {
         console.log(props)
@@ -9,7 +9,7 @@ const itemPlace = (props) => {
                     <View style={styles.container}>
                         <ImageBackground source={{ uri: props.image }} style={styles.image}>
                             <View style={styles.textContainer}>
-                                <Text style={styles.title}>{ props.name }</Text>
+                                <AppTextBold style={styles.title}>{ props.name }</AppTextBold>
                                 <Text style={styles.location}>{ props.location }</Text>
                             </View>
                         </ImageBackground>
@@ -34,7 +34,6 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 20,
-        fontWeight: 'bold',
         color: '#FFFFFF',
         textShadowOffset: {width: 1, height: 1},
         textShadowRadius: 3,
