@@ -31,16 +31,24 @@ const ListStack = createStackNavigator({
             headerTintColor: '#FFFFFF',
             headerStyle: {
                 backgroundColor: THEME_COLOR
+            },
+            headerTitleStyle: {
+                fontWeight:'200',
+                fontFamily: 'Pacifico'
             }
         }
     },
     DetailsList: {
         screen: DetailListPlaceScreen,
         navigationOptions: {
-            title: 'Detail List Place',
+            title: 'Detail Place',
             headerTintColor: '#FFFFFF',
             headerStyle: {
                 backgroundColor: THEME_COLOR
+            },
+            headerTitleStyle: {
+                fontWeight:'200',
+                fontFamily: 'Pacifico'
             }
         }
     }
@@ -65,6 +73,10 @@ const GalleryStack = createStackNavigator({
             headerTintColor: '#FFFFFF',
             headerStyle: {
                 backgroundColor: THEME_COLOR
+            },
+            headerTitleStyle: {
+                fontWeight:'200',
+                fontFamily: 'Pacifico'
             }
         }
     },
@@ -75,6 +87,10 @@ const GalleryStack = createStackNavigator({
             headerTintColor: '#FFFFFF',
             headerStyle: {
                 backgroundColor: THEME_COLOR
+            },
+            headerTitleStyle: {
+                fontWeight:'200',
+                fontFamily: 'Pacifico'
             }
         }
     }
@@ -99,6 +115,10 @@ const MapStack = createStackNavigator({
             headerTintColor: '#FFFFFF',
             headerStyle: {
                 backgroundColor: THEME_COLOR
+            },
+            headerTitleStyle: {
+                fontWeight:'200',
+                fontFamily: 'Pacifico'
             }
         }
     }
@@ -114,6 +134,10 @@ const AboutStack = createStackNavigator({
                 backgroundColor: THEME_COLOR,
                 elevation: 0,
                 shadowOpacity: 0
+            },
+            headerTitleStyle: {
+                fontWeight:'200',
+                fontFamily: 'Pacifico'
             }
         }
     }
