@@ -46,6 +46,7 @@
 		31E94257DFF343BABC8DC30B /* MyriadProBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDD0F5612BCC4456BE48DEEB /* MyriadProBold.ttf */; };
 		BDDC7FD7E8F94023AB062B77 /* Pacifico.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C572BB3A9F6B4DEC8B612448 /* Pacifico.ttf */; };
 		F519A815CDC34853B0A55987 /* MyriadProRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 807D6813E4B44597AC170B82 /* MyriadProRegular.ttf */; };
+		11DDB1FBCC1E431A856F0ADD /* Consola.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95199A8DBD3944D5B668C916 /* Consola.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -362,6 +363,7 @@
 		BDD0F5612BCC4456BE48DEEB /* MyriadProBold.ttf */ = {isa = PBXFileReference; name = "MyriadProBold.ttf"; path = "../assets/fonts/MyriadProBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		C572BB3A9F6B4DEC8B612448 /* Pacifico.ttf */ = {isa = PBXFileReference; name = "Pacifico.ttf"; path = "../assets/fonts/Pacifico.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		807D6813E4B44597AC170B82 /* MyriadProRegular.ttf */ = {isa = PBXFileReference; name = "MyriadProRegular.ttf"; path = "../assets/fonts/MyriadProRegular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		95199A8DBD3944D5B668C916 /* Consola.ttf */ = {isa = PBXFileReference; name = "Consola.ttf"; path = "../assets/fonts/Consola.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -639,6 +641,7 @@
 				BDD0F5612BCC4456BE48DEEB /* MyriadProBold.ttf */,
 				C572BB3A9F6B4DEC8B612448 /* Pacifico.ttf */,
 				807D6813E4B44597AC170B82 /* MyriadProRegular.ttf */,
+				95199A8DBD3944D5B668C916 /* Consola.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1094,6 +1097,7 @@
 				31E94257DFF343BABC8DC30B /* MyriadProBold.ttf in Resources */,
 				BDDC7FD7E8F94023AB062B77 /* Pacifico.ttf in Resources */,
 				F519A815CDC34853B0A55987 /* MyriadProRegular.ttf in Resources */,
+				11DDB1FBCC1E431A856F0ADD /* Consola.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
