@@ -23,6 +23,13 @@ import { THEME_COLOR } from './src/data/Constants';
 import configureStore from './src/store/configureStore';
 const store = configureStore();
 
+const MyHeader = {
+    titleStyle: {
+        fontWeight: '200',
+        fontFamily: 'Pacifico'
+    }
+}
+
 const ListStack = createStackNavigator({
     ListHome: {
         screen : ListPlaceScreen,
@@ -32,10 +39,7 @@ const ListStack = createStackNavigator({
             headerStyle: {
                 backgroundColor: THEME_COLOR
             },
-            headerTitleStyle: {
-                fontWeight:'200',
-                fontFamily: 'Pacifico'
-            }
+            headerTitleStyle: [ MyHeader.titleStyle ]
         }
     },
     DetailsList: {
@@ -46,10 +50,7 @@ const ListStack = createStackNavigator({
             headerStyle: {
                 backgroundColor: THEME_COLOR
             },
-            headerTitleStyle: {
-                fontWeight:'200',
-                fontFamily: 'Pacifico'
-            }
+            headerTitleStyle: [ MyHeader.titleStyle ]
         }
     }
 });
@@ -74,10 +75,7 @@ const GalleryStack = createStackNavigator({
             headerStyle: {
                 backgroundColor: THEME_COLOR
             },
-            headerTitleStyle: {
-                fontWeight:'200',
-                fontFamily: 'Pacifico'
-            }
+            headerTitleStyle: [ MyHeader.titleStyle ]
         }
     },
     DetailGallery: {
@@ -88,10 +86,7 @@ const GalleryStack = createStackNavigator({
             headerStyle: {
                 backgroundColor: THEME_COLOR
             },
-            headerTitleStyle: {
-                fontWeight:'200',
-                fontFamily: 'Pacifico'
-            }
+            headerTitleStyle: [ MyHeader.titleStyle ]
         }
     }
 });
@@ -116,10 +111,7 @@ const MapStack = createStackNavigator({
             headerStyle: {
                 backgroundColor: THEME_COLOR
             },
-            headerTitleStyle: {
-                fontWeight:'200',
-                fontFamily: 'Pacifico'
-            }
+            headerTitleStyle: [ MyHeader.titleStyle ]
         }
     }
 });
@@ -135,10 +127,7 @@ const AboutStack = createStackNavigator({
                 elevation: 0,
                 shadowOpacity: 0
             },
-            headerTitleStyle: {
-                fontWeight:'200',
-                fontFamily: 'Pacifico'
-            }
+            headerTitleStyle: [ MyHeader.titleStyle ]
         }
     }
 });
