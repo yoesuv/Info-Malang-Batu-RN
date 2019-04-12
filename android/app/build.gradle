@@ -1,4 +1,15 @@
+buildscript {
+    repositories {
+        mavenCentral() // or jcenter()
+    }
+
+    dependencies {
+        classpath 'com.getkeepsafe.dexcount:dexcount-gradle-plugin:0.8.6'
+    }
+}
+
 apply plugin: "com.android.application"
+apply plugin: 'com.getkeepsafe.dexcount'
 
 import com.android.build.OutputFile
 
@@ -107,6 +118,7 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        setProperty("archivesBaseName", applicationId+"-v"+versionCode+"("+versionName+")")
     }
     splits {
         abi {
