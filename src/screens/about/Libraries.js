@@ -3,7 +3,7 @@ import { View, Text, FlatList, StyleSheet } from "react-native";
 
 import ItemLibraries from '../../components/ItemLibrary';
 
-import { LICENSE_REACT_NAVIGATION } from '../../data/Constants';
+import { LICENSE_REACT_NATIVE, LICENSE_REACT_NAVIGATION, LICENSE_REACT_REDUX, LICENSE_REACT_NATIVE_MAPS } from '../../data/Constants';
 
 class LibrariesScreen extends React.Component {
 
@@ -11,12 +11,32 @@ class LibrariesScreen extends React.Component {
         libs: [{
                 name: 'React Native',
                 link: 'https://facebook.github.io/react-native/',
-                license: 'license'
+                license: LICENSE_REACT_NATIVE
             },
             {
                 name: 'React Navigation',
                 link: 'https://reactnavigation.org/',
                 license: LICENSE_REACT_NAVIGATION
+            },
+            {
+                name: 'React Redux',
+                link: 'https://react-redux.js.org/',
+                license: LICENSE_REACT_REDUX
+            },
+            {
+                name: 'Redux Thunk',
+                link: 'https://github.com/reduxjs/redux-thunk',
+                license: LICENSE_REACT_REDUX
+            },
+            {
+                name: 'React Native Maps',
+                link: 'https://github.com/react-native-community/react-native-maps',
+                license: LICENSE_REACT_NATIVE_MAPS
+            },
+            {
+                name: 'React Native ViewPager',
+                link: 'https://github.com/zbtang/React-Native-ViewPager',
+                license: '\n'
             }]
     }
 
