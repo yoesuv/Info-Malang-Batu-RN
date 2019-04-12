@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
         paddingTop: 16
     },
     textThanks: {
-        fontSize: 17
+        fontSize: 15
     }
 });
 
