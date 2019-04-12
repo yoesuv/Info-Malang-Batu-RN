@@ -1,6 +1,8 @@
 import React from "react";
 import { View, Text, Image, StyleSheet } from "react-native";
 
+import AppTextRegular from '../../components/AppTextRegular';
+
 class DetailGalleryScreen extends React.Component {
 
     constructor(props){
@@ -14,7 +16,7 @@ class DetailGalleryScreen extends React.Component {
         return (
             <View>
                 <Image source={{uri:this.state.gallery.image}} style={styles.containerImage} />
-                <Text style={styles.textDescription}>{this.state.gallery.caption}</Text>
+                <AppTextRegular style={styles.textDescription}>{this.state.gallery.caption}</AppTextRegular>
             </View>
         )
     }
@@ -27,7 +29,7 @@ const styles = StyleSheet.create({
         height: 250
     },
     textDescription: {
-        fontSize: 16,
+        fontSize: 18,
         marginTop: 8,
         marginLeft: 8,
         marginRight: 8

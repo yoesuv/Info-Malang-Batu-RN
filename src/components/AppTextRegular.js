@@ -1,14 +1,14 @@
 import React from 'react';
 import { Text, StyleSheet } from 'react-native';
 
-const AppTextBold = (props) => {
+const AppTextRegular = (props) => {
     return <Text style={[styles.text, props.style]}>{ props.children }</Text>
 }
 
 const styles = StyleSheet.create({
     text: {
-        fontFamily: "MyriadProBold",
+        fontFamily: "MyriadProRegular",
     }
 });
 
-export default AppTextBold;
+export default AppTextRegular;

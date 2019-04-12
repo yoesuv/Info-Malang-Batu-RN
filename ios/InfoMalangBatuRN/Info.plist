@@ -55,7 +55,9 @@
 	</dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>MyriadPro-Bold.ttf</string>
+		<string>MyriadProBold.ttf</string>
+		<string>Pacifico.ttf</string>
+		<string>MyriadProRegular.ttf</string>
 	</array>
 </dict>
 </plist>
