@@ -6,6 +6,7 @@ import MapView from 'react-native-maps';
 
 import { getPins } from '../../store/actions/index';
 import { DEFAULT_LATITUDE, DEFAULT_LONGITUDE } from '../../data/Constants';
+import { MAP_STYLE } from '../../data/MapStyle';
 import Icon from '../../components/Icon';
 
 import iconRefresh from '../../images/ic_action_refresh.png';
@@ -50,6 +51,7 @@ class MapLocationScreen extends React.Component {
             <View style={styles.container}>
                 <MapView style={styles.mapContainer}
                     initialRegion={this.state.focusedLocation}
+                    customMapStyle={MAP_STYLE}
                     ref={ref => this.map = ref} >
                     {this.props.pins.map((marker, index) => (
                         <MapView.Marker
