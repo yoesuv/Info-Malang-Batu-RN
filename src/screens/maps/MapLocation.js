@@ -10,6 +10,7 @@ import { MAP_STYLE } from '../../data/MapStyle';
 import Icon from '../../components/Icon';
 
 import iconRefresh from '../../images/ic_action_refresh.png';
+import iconMarker from '../../images/ic_pin.png';
 
 class MapLocationScreen extends React.Component {
 
@@ -58,6 +59,7 @@ class MapLocationScreen extends React.Component {
                             coordinate={{latitude: marker.latitude, longitude: marker.longitude}}
                             title={marker.name}
                             key={index}
+                            icon={iconMarker}
                         />
                     ))}
                 </MapView>
