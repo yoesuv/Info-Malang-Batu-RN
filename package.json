@@ -7,12 +7,12 @@
     "test": "jest"
   },
   "dependencies": {
-    "react": "16.8.3",
+    "react": "16.8.6",
     "react-native": "0.59.4",
     "react-native-gesture-handler": "^1.1.0",
-    "react-native-maps": "https://github.com/react-native-community/react-native-maps.git#v0.24-rc1",
-    "react-navigation": "^3.6.1",
-    "react-redux": "^7.0.1",
+    "react-native-maps": "^0.24.0",
+    "react-navigation": "^3.8.1",
+    "react-redux": "^7.0.2",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
     "rn-viewpager": "^1.2.9"
@@ -23,15 +23,14 @@
     "babel-jest": "24.7.1",
     "jest": "24.7.1",
     "metro-react-native-babel-preset": "0.53.1",
-    "react-test-renderer": "16.8.3"
+    "react-test-renderer": "16.8.6"
   },
   "jest": {
     "preset": "react-native"
   },
   "rnpm": {
-     "assets": [
-         "./assets/fonts/"
-     ]
+    "assets": [
+      "./assets/fonts/"
+    ]
   }
-
 }
