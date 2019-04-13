@@ -57,9 +57,9 @@ class MapLocationScreen extends React.Component {
                     {this.props.pins.map((marker, index) => (
                         <MapView.Marker
                             coordinate={{latitude: marker.latitude, longitude: marker.longitude}}
+                            icon={iconMarker}
                             title={marker.name}
                             key={index}
-                            icon={iconMarker}
                         />
                     ))}
                 </MapView>
