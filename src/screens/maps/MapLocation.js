@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Image, TouchableOpacity, StyleSheet } from "react-native";
+import { View, Text, Image, TouchableOpacity, StyleSheet, PermissionsAndroid, Platform } from "react-native";
 import { connect } from 'react-redux';
 
 import MapView from 'react-native-maps';
@@ -51,8 +51,17 @@ class MapLocationScreen extends React.Component {
         return (
             <View style={styles.container}>
                 <MapView style={styles.mapContainer}
+                    onMapReady={() => {
+                        PermissionsAndroid.request(
+                          PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION
+                        ).then(granted => {
+                            console.log("permission granted");
+                        });
+                    }}
                     initialRegion={this.state.focusedLocation}
                     customMapStyle={MAP_STYLE}
+                    showsUserLocation={Platform.OS === 'android' ? true : false}
+                    showsMyLocationButton={Platform.OS === 'android' ? true : false}
                     ref={ref => this.map = ref} >
                     {this.props.pins.map((marker, index) => (
                         <MapView.Marker
