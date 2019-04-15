@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, Image, TouchableOpacity, StyleSheet, PermissionsAndroid, Platform } from "react-native";
+import Dialog, { DialogContent, DialogFooter,DialogButton } from 'react-native-popup-dialog';
 import { connect } from 'react-redux';
 
 import MapView from 'react-native-maps';
@@ -8,9 +9,12 @@ import { getPins } from '../../store/actions/index';
 import { DEFAULT_LATITUDE, DEFAULT_LONGITUDE } from '../../data/Constants';
 import { MAP_STYLE } from '../../data/MapStyle';
 import Icon from '../../components/Icon';
+import AppTextBold from '../../components/AppTextBold';
+import AppTextRegular from '../../components/AppTextRegular';
 
 import iconRefresh from '../../images/ic_action_refresh.png';
 import iconMarker from '../../images/ic_pin.png';
+import iconApproved from '../../images/ic_approved.png';
 
 class MapLocationScreen extends React.Component {
 
@@ -20,7 +24,8 @@ class MapLocationScreen extends React.Component {
             longitude: DEFAULT_LONGITUDE,
             latitudeDelta: 0.85,
             longitudeDelta: 0.85
-        }
+        },
+        dialog: false
     }
 
     static navigationOptions = ({navigation}) => {
@@ -50,13 +55,40 @@ class MapLocationScreen extends React.Component {
     render () {
         return (
             <View style={styles.container}>
+                <Dialog
+                    visible={this.state.dialog}>
+                    <DialogContent>
+                        <View style={styles.dialogContainer}>
+                            <Image source={iconApproved} />
+                            <AppTextBold>Location Enabled!</AppTextBold>
+                        </View>
+                    </DialogContent>
+                    <DialogFooter>
+                        <DialogButton
+                            text="OK"
+                            bordered
+                            onPress={() => {
+                              this.setState({ dialog: false });
+                            }}
+                            key="button-2" />
+                    </DialogFooter>
+                </Dialog>
+
                 <MapView style={styles.mapContainer}
                     onMapReady={() => {
-                        PermissionsAndroid.request(
-                          PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION
-                        ).then(granted => {
-                            console.log("permission granted");
-                        });
+                        PermissionsAndroid.check(PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION).then(response => {
+                            if (response) {
+                                this.setState({ dialog: false });
+                            } else {
+                                PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION).then(result => {
+                                    if (result === PermissionsAndroid.RESULTS.GRANTED) {
+                                        this.setState({ dialog: true });
+                                    } else {
+                                        this.setState({ dialog: false });
+                                    }
+                                });
+                            }
+                        })
                     }}
                     initialRegion={this.state.focusedLocation}
                     customMapStyle={MAP_STYLE}
@@ -86,6 +118,12 @@ const styles = StyleSheet.create({
     mapContainer: {
         width: "100%",
         height: "100%"
+    },
+    dialogContainer: {
+        alignItems: 'center',
+        paddingTop: 16,
+        paddingLeft: 16,
+        paddingRight: 16
     }
 });
 
