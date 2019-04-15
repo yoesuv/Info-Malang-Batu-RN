@@ -28,10 +28,16 @@ export const setListPlace = places => {
 
 export const getGallery = () => {
     return dispatch => {
+        dispatch(uiStartLoading());
         fetch(BASE_URL+"Gallery_Malang_Batu.json")
         .then((response) => response.json())
-        .then((responseJson) => dispatch(setGallery(responseJson)))
+        .then((responseJson) => {
+            dispatch(uiStopLoading());
+            dispatch(setGallery(responseJson))
+
+        })
         .catch((err) => {
+            dispatch(uiStopLoading());
             console.log(err);
         });
     };

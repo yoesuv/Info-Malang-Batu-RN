@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, FlatList, StyleSheet } from "react-native";
+import { View, Text, FlatList, ActivityIndicator, StyleSheet } from "react-native";
 import { connect } from 'react-redux';
 
 import { getGallery } from '../../store/actions/index';
@@ -18,29 +18,45 @@ class GalleryScreen extends React.Component {
     }
 
     render () {
+
+        let content = (<FlatList
+            data={this.props.galleries}
+            renderItem={
+                ({item, index}) => (
+                    <ItemGallery
+                        image={item.thumbnail}
+                        onItemPressed={() => this.selectedDataHandler(index)}/>
+                )
+            }
+            numColumns={3}
+            keyExtractor={(item, index) => index.toString()}
+        />);
+
+        if (this.props.isLoading) {
+            content = (<ActivityIndicator size="large"/>);
+        }
+
         return (
-            <View>
-            <FlatList
-                data={this.props.galleries}
-                renderItem={
-                    ({item, index}) => (
-                        <ItemGallery
-                            image={item.thumbnail}
-                            onItemPressed={() => this.selectedDataHandler(index)}/>
-                    )
-                }
-                numColumns={3}
-                keyExtractor={(item, index) => index.toString()}
-            />
+            <View style={styles.container}>
+                { content }
             </View>
         )
     }
 
 }
 
+const styles = StyleSheet.create({
+    container: {
+        flex:1,
+        justifyContent: 'center',
+        alignItems: 'stretch'
+    }
+});
+
 const mapStateToProps = state => {
     return {
-        galleries: state.dataConfigure.galleries
+        galleries: state.dataConfigure.galleries,
+        isLoading: state.uiConfigure.isLoading
     }
 }
 
