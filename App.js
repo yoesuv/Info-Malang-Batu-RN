@@ -1,10 +1,8 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 
 import { createBottomTabNavigator, createStackNavigator, createAppContainer } from "react-navigation";
 
-import ListPlaceScreen from './src/screens/listplace/ListPlace';
-import DetailListPlaceScreen from './src/screens/listplace/DetailListPlace';
 import GalleryScreen from './src/screens/gallery/Gallery';
 import DetailGalleryScreen from './src/screens/gallery/DetailGallery';
 import MapScreen from './src/screens/maps/MapLocation';
@@ -23,6 +21,8 @@ import iconOtherSelected from './src/images/ic_menu_other_selected.png';
 
 import { THEME_COLOR, HEADER_TINT_COLOR } from './src/data/Colors';
 
+import { ListStack } from './src/routes/ListRoute';
+
 import configureStore from './src/store/configureStore';
 const store = configureStore();
 
@@ -32,42 +32,6 @@ const MyHeader = {
         fontFamily: 'Pacifico'
     }
 }
-
-const ListStack = createStackNavigator({
-    ListHome: {
-        screen : ListPlaceScreen,
-        navigationOptions: {
-            title: 'List Place',
-            headerTintColor: HEADER_TINT_COLOR,
-            headerStyle: {
-                backgroundColor: THEME_COLOR
-            },
-            headerTitleStyle: [ MyHeader.titleStyle ]
-        }
-    },
-    DetailsList: {
-        screen: DetailListPlaceScreen,
-        navigationOptions: {
-            title: 'Detail Place',
-            headerTintColor: HEADER_TINT_COLOR,
-            headerStyle: {
-                backgroundColor: THEME_COLOR
-            },
-            headerTitleStyle: [ MyHeader.titleStyle ]
-        }
-    }
-});
-
-ListStack.navigationOptions = ({ navigation }) => {
-    let tabBarVisible = true;
-    if (navigation.state.index > 0) {
-        tabBarVisible = false;
-    }
-
-    return {
-        tabBarVisible,
-    };
-};
 
 const GalleryStack = createStackNavigator({
     GalleryHome: {
