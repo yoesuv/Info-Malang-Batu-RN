@@ -1,9 +1,9 @@
-import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import React, { Component } from "react";
+import { View, StyleSheet } from "react-native";
 
 import AppTextRegular from '../../components/AppTextRegular';
 
-class ThanksScreen extends React.Component {
+class ThanksScreen extends Component {
     render () {
         return (
             <View style={styles.container}>

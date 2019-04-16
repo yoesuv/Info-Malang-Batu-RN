@@ -1,6 +1,6 @@
-import React from "react";
-import { View, Text, Image, TouchableOpacity, StyleSheet, PermissionsAndroid, Platform } from "react-native";
-import Dialog, { DialogContent, DialogFooter,DialogButton } from 'react-native-popup-dialog';
+import React, { Component } from "react";
+import { View, Image, TouchableOpacity, StyleSheet, PermissionsAndroid, Platform } from "react-native";
+import Dialog, { DialogContent, DialogFooter, DialogButton } from 'react-native-popup-dialog';
 import { connect } from 'react-redux';
 
 import MapView from 'react-native-maps';
@@ -16,7 +16,7 @@ import iconRefresh from '../../images/ic_action_refresh.png';
 import iconMarker from '../../images/ic_pin.png';
 import iconApproved from '../../images/ic_approved.png';
 
-class MapLocationScreen extends React.Component {
+class MapLocationScreen extends Component {
 
     state = {
         focusedLocation: {

@@ -1,11 +1,11 @@
-import React from "react";
-import { View, Text, FlatList, StyleSheet } from "react-native";
+import React,{ Component } from "react";
+import { View, FlatList, StyleSheet } from "react-native";
 
 import ItemLibraries from '../../components/ItemLibrary';
 
 import { LICENSE_REACT_NATIVE, LICENSE_REACT_NAVIGATION, LICENSE_REACT_REDUX, LICENSE_REACT_NATIVE_MAPS, LICENSE_REACT_NATIVE_POPUP_DIALOG } from '../../data/Constants';
 
-class LibrariesScreen extends React.Component {
+class LibrariesScreen extends Component {
 
     state = {
         libs: [{

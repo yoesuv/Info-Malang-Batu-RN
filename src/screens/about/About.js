@@ -1,6 +1,6 @@
-import React from "react";
-import { View, Text, StyleSheet } from "react-native";
-import {PagerTabIndicator, IndicatorViewPager, PagerTitleIndicator, PagerDotIndicator} from 'rn-viewpager';
+import React, { Component } from "react";
+import { View, StyleSheet } from "react-native";
+import { IndicatorViewPager, PagerTitleIndicator } from 'rn-viewpager';
 
 import { THEME_COLOR } from '../../data/Constants';
 
@@ -9,7 +9,7 @@ import ChangelogScreen from './Changelog';
 import ThanksScreen from './Thanks';
 import LibrariesScreen from './Libraries';
 
-class AboutScreen extends React.Component {
+class AboutScreen extends Component {
 
     renderTab() {
          return (
