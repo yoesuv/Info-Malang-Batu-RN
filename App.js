@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 
-import { createBottomTabNavigator, createStackNavigator, createAppContainer } from "react-navigation";
-
-import AboutScreen from './src/screens/about/About';
+import { createBottomTabNavigator, createAppContainer } from "react-navigation";
 
 import Icon from './src/components/Icon';
 
@@ -16,39 +14,15 @@ import iconMapsSelected from './src/images/ic_menu_maps_selected.png';
 import iconOther from './src/images/ic_menu_other.png';
 import iconOtherSelected from './src/images/ic_menu_other_selected.png';
 
-import { THEME_COLOR, HEADER_TINT_COLOR } from './src/data/Colors';
+import { THEME_COLOR } from './src/data/Colors';
 
 import { ListStack } from './src/routes/ListRoute';
 import { GalleryStack } from './src/routes/GalleryRoute';
 import { MapStack } from './src/routes/MapRoute';
+import { AboutStack } from './src/routes/AboutRoute';
 
 import configureStore from './src/store/configureStore';
 const store = configureStore();
-
-const MyHeader = {
-    titleStyle: {
-        fontWeight: '200',
-        fontFamily: 'Pacifico'
-    }
-}
-
-
-
-const AboutStack = createStackNavigator({
-    Other: {
-        screen: AboutScreen,
-        navigationOptions: {
-            title: 'Other',
-            headerTintColor: HEADER_TINT_COLOR,
-            headerStyle: {
-                backgroundColor: THEME_COLOR,
-                elevation: 0,
-                shadowOpacity: 0
-            },
-            headerTitleStyle: [ MyHeader.titleStyle ]
-        }
-    }
-});
 
 let TabNavigator = createBottomTabNavigator(
     {
