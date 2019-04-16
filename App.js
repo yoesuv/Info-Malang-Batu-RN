@@ -3,8 +3,6 @@ import { Provider } from 'react-redux';
 
 import { createBottomTabNavigator, createStackNavigator, createAppContainer } from "react-navigation";
 
-import GalleryScreen from './src/screens/gallery/Gallery';
-import DetailGalleryScreen from './src/screens/gallery/DetailGallery';
 import MapScreen from './src/screens/maps/MapLocation';
 import AboutScreen from './src/screens/about/About';
 
@@ -22,6 +20,7 @@ import iconOtherSelected from './src/images/ic_menu_other_selected.png';
 import { THEME_COLOR, HEADER_TINT_COLOR } from './src/data/Colors';
 
 import { ListStack } from './src/routes/ListRoute';
+import { GalleryStack } from './src/routes/GalleryRoute';
 
 import configureStore from './src/store/configureStore';
 const store = configureStore();
@@ -32,42 +31,6 @@ const MyHeader = {
         fontFamily: 'Pacifico'
     }
 }
-
-const GalleryStack = createStackNavigator({
-    GalleryHome: {
-        screen : GalleryScreen,
-        navigationOptions: {
-            title: 'Gallery',
-            headerTintColor: HEADER_TINT_COLOR,
-            headerStyle: {
-                backgroundColor: THEME_COLOR
-            },
-            headerTitleStyle: [ MyHeader.titleStyle ]
-        }
-    },
-    DetailGallery: {
-        screen: DetailGalleryScreen,
-        navigationOptions: {
-            title: 'Detail Gallery',
-            headerTintColor: HEADER_TINT_COLOR,
-            headerStyle: {
-                backgroundColor: THEME_COLOR
-            },
-            headerTitleStyle: [ MyHeader.titleStyle ]
-        }
-    }
-});
-
-GalleryStack.navigationOptions = ({ navigation }) => {
-    let tabBarVisible = true;
-    if (navigation.state.index > 0) {
-        tabBarVisible = false;
-    }
-
-    return {
-        tabBarVisible,
-    };
-};
 
 const MapStack = createStackNavigator({
     Other: {
