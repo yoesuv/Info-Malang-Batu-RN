@@ -3,7 +3,6 @@ import { Provider } from 'react-redux';
 
 import { createBottomTabNavigator, createStackNavigator, createAppContainer } from "react-navigation";
 
-import MapScreen from './src/screens/maps/MapLocation';
 import AboutScreen from './src/screens/about/About';
 
 import Icon from './src/components/Icon';
@@ -21,6 +20,7 @@ import { THEME_COLOR, HEADER_TINT_COLOR } from './src/data/Colors';
 
 import { ListStack } from './src/routes/ListRoute';
 import { GalleryStack } from './src/routes/GalleryRoute';
+import { MapStack } from './src/routes/MapRoute';
 
 import configureStore from './src/store/configureStore';
 const store = configureStore();
@@ -32,19 +32,7 @@ const MyHeader = {
     }
 }
 
-const MapStack = createStackNavigator({
-    Other: {
-        screen: MapScreen,
-        navigationOptions: {
-            title: 'Maps',
-            headerTintColor: HEADER_TINT_COLOR,
-            headerStyle: {
-                backgroundColor: THEME_COLOR
-            },
-            headerTitleStyle: [ MyHeader.titleStyle ]
-        }
-    }
-});
+
 
 const AboutStack = createStackNavigator({
     Other: {

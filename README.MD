@@ -1,4 +1,6 @@
-## Info Malang Batu 1.0.0 ##
+## Info Malang Batu 1.0.1 ##
+
+* :sparkles: refactoring code
 
 React Native Version, click [here](https://github.com/yoesuv/Info-Malang-Batu) for android native version.<br/>
 download APK File [here](https://drive.google.com/file/d/1z4_xExLBjPlOpOEts6MZ3FLS8ZOuqYKf/view?usp=sharing)
