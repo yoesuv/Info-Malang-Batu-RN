@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { View, StyleSheet } from "react-native";
 import { IndicatorViewPager, PagerTitleIndicator } from 'rn-viewpager';
 
-import { THEME_COLOR } from '../../data/Constants';
+import { THEME_COLOR } from '../../data/Colors';
 
 import InformationScreen from './Information';
 import ChangelogScreen from './Changelog';

@@ -5,7 +5,7 @@ import AppTextBold from './AppTextBold';
 import AppTextRegular from './AppTextRegular';
 import AppTextConsola from './AppTextConsola';
 
-import { THEME_COLOR } from '../data/Constants';
+import { THEME_COLOR } from '../data/Colors';
 
 const itemLibrary = (props) => {
     return <View style={styles.container}>

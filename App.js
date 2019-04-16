@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {Platform} from 'react-native';
 import { Provider } from 'react-redux';
 
 import { createBottomTabNavigator, createStackNavigator, createAppContainer } from "react-navigation";
@@ -22,7 +21,7 @@ import iconMapsSelected from './src/images/ic_menu_maps_selected.png';
 import iconOther from './src/images/ic_menu_other.png';
 import iconOtherSelected from './src/images/ic_menu_other_selected.png';
 
-import { THEME_COLOR } from './src/data/Constants';
+import { THEME_COLOR, HEADER_TINT_COLOR } from './src/data/Colors';
 
 import configureStore from './src/store/configureStore';
 const store = configureStore();
@@ -39,7 +38,7 @@ const ListStack = createStackNavigator({
         screen : ListPlaceScreen,
         navigationOptions: {
             title: 'List Place',
-            headerTintColor: '#FFFFFF',
+            headerTintColor: HEADER_TINT_COLOR,
             headerStyle: {
                 backgroundColor: THEME_COLOR
             },
@@ -50,7 +49,7 @@ const ListStack = createStackNavigator({
         screen: DetailListPlaceScreen,
         navigationOptions: {
             title: 'Detail Place',
-            headerTintColor: '#FFFFFF',
+            headerTintColor: HEADER_TINT_COLOR,
             headerStyle: {
                 backgroundColor: THEME_COLOR
             },
@@ -75,7 +74,7 @@ const GalleryStack = createStackNavigator({
         screen : GalleryScreen,
         navigationOptions: {
             title: 'Gallery',
-            headerTintColor: '#FFFFFF',
+            headerTintColor: HEADER_TINT_COLOR,
             headerStyle: {
                 backgroundColor: THEME_COLOR
             },
@@ -86,7 +85,7 @@ const GalleryStack = createStackNavigator({
         screen: DetailGalleryScreen,
         navigationOptions: {
             title: 'Detail Gallery',
-            headerTintColor: '#FFFFFF',
+            headerTintColor: HEADER_TINT_COLOR,
             headerStyle: {
                 backgroundColor: THEME_COLOR
             },
@@ -111,7 +110,7 @@ const MapStack = createStackNavigator({
         screen: MapScreen,
         navigationOptions: {
             title: 'Maps',
-            headerTintColor: '#FFFFFF',
+            headerTintColor: HEADER_TINT_COLOR,
             headerStyle: {
                 backgroundColor: THEME_COLOR
             },
@@ -125,7 +124,7 @@ const AboutStack = createStackNavigator({
         screen: AboutScreen,
         navigationOptions: {
             title: 'Other',
-            headerTintColor: '#FFFFFF',
+            headerTintColor: HEADER_TINT_COLOR,
             headerStyle: {
                 backgroundColor: THEME_COLOR,
                 elevation: 0,
