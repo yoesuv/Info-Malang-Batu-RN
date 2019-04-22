@@ -47,6 +47,22 @@ class MapLocationScreen extends Component {
         });
     }
 
+    checkPermissionAndroid() {
+        PermissionsAndroid.check(PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION).then(response => {
+                if (response) {
+                    this.setState({ dialog: false });
+                } else {
+                    PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION).then(result => {
+                        if (result === PermissionsAndroid.RESULTS.GRANTED) {
+                            this.setState({ dialog: true });
+                        } else {
+                            this.setState({ dialog: false });
+                        }
+                    });
+                }
+            })
+    }
+
     componentDidMount() {
         this.props.navigation.setParams({ handleRefresh: this.actionRefresh });
         this.props.onGetPins();
@@ -76,25 +92,13 @@ class MapLocationScreen extends Component {
 
                 <MapView style={styles.mapContainer}
                     onMapReady={() => {
-                        PermissionsAndroid.check(PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION).then(response => {
-                            if (response) {
-                                this.setState({ dialog: false });
-                            } else {
-                                PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION).then(result => {
-                                    if (result === PermissionsAndroid.RESULTS.GRANTED) {
-                                        this.setState({ dialog: true });
-                                    } else {
-                                        this.setState({ dialog: false });
-                                    }
-                                });
-                            }
-                        })
+                        this.checkPermissionAndroid()
                     }}
                     initialRegion={this.state.focusedLocation}
                     customMapStyle={MAP_STYLE}
                     showsUserLocation={Platform.OS === 'android' ? true : false}
                     showsMyLocationButton={Platform.OS === 'android' ? true : false}
-                    ref={ref => this.map = ref} >
+                    ref={ref => this.map = ref}>
                     {this.props.pins.map((marker, index) => (
                         <MapView.Marker
                             coordinate={{latitude: marker.latitude, longitude: marker.longitude}}
