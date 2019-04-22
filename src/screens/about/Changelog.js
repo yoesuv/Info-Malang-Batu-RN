@@ -7,6 +7,9 @@ class ChangelogScreen extends Component {
 
     state = {
         changelogs: [{
+            versionName: 'Version 1.0.1',
+            versionInfo: '• improve performance\n• update libraries'
+        },{
             versionName: 'Version 1.0.0',
             versionInfo: '• initial release'
         }]
