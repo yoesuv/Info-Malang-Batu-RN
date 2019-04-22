@@ -1,6 +1,6 @@
-import React from "react";
-import { View, Text, Image, TouchableOpacity, StyleSheet, PermissionsAndroid, Platform } from "react-native";
-import Dialog, { DialogContent, DialogFooter,DialogButton } from 'react-native-popup-dialog';
+import React, { Component } from "react";
+import { View, Image, TouchableOpacity, StyleSheet, PermissionsAndroid, Platform } from "react-native";
+import Dialog, { DialogContent, DialogFooter, DialogButton } from 'react-native-popup-dialog';
 import { connect } from 'react-redux';
 
 import MapView from 'react-native-maps';
@@ -16,7 +16,7 @@ import iconRefresh from '../../images/ic_action_refresh.png';
 import iconMarker from '../../images/ic_pin.png';
 import iconApproved from '../../images/ic_approved.png';
 
-class MapLocationScreen extends React.Component {
+class MapLocationScreen extends Component {
 
     state = {
         focusedLocation: {
@@ -45,6 +45,22 @@ class MapLocationScreen extends React.Component {
             latitude: DEFAULT_LATITUDE,
             longitude: DEFAULT_LONGITUDE
         });
+    }
+
+    checkPermissionAndroid() {
+        PermissionsAndroid.check(PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION).then(response => {
+                if (response) {
+                    this.setState({ dialog: false });
+                } else {
+                    PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION).then(result => {
+                        if (result === PermissionsAndroid.RESULTS.GRANTED) {
+                            this.setState({ dialog: true });
+                        } else {
+                            this.setState({ dialog: false });
+                        }
+                    });
+                }
+            })
     }
 
     componentDidMount() {
@@ -76,25 +92,13 @@ class MapLocationScreen extends React.Component {
 
                 <MapView style={styles.mapContainer}
                     onMapReady={() => {
-                        PermissionsAndroid.check(PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION).then(response => {
-                            if (response) {
-                                this.setState({ dialog: false });
-                            } else {
-                                PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION).then(result => {
-                                    if (result === PermissionsAndroid.RESULTS.GRANTED) {
-                                        this.setState({ dialog: true });
-                                    } else {
-                                        this.setState({ dialog: false });
-                                    }
-                                });
-                            }
-                        })
+                        this.checkPermissionAndroid()
                     }}
                     initialRegion={this.state.focusedLocation}
                     customMapStyle={MAP_STYLE}
                     showsUserLocation={Platform.OS === 'android' ? true : false}
                     showsMyLocationButton={Platform.OS === 'android' ? true : false}
-                    ref={ref => this.map = ref} >
+                    ref={ref => this.map = ref}>
                     {this.props.pins.map((marker, index) => (
                         <MapView.Marker
                             coordinate={{latitude: marker.latitude, longitude: marker.longitude}}

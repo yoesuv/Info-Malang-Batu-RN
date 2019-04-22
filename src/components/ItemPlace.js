@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, ImageBackground, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, ImageBackground, TouchableOpacity, StyleSheet } from 'react-native';
 
 import AppTextBold from './AppTextBold';
 import AppTextRegular from './AppTextRegular';

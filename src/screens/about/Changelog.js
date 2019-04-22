@@ -1,12 +1,15 @@
-import React from "react";
-import { View, Text, FlatList, StyleSheet } from "react-native";
+import React, { Component } from "react";
+import { View, FlatList, StyleSheet } from "react-native";
 
 import ItemChangelog from '../../components/ItemChangelog';
 
-class ChangelogScreen extends React.Component {
+class ChangelogScreen extends Component {
 
     state = {
         changelogs: [{
+            versionName: 'Version 1.0.1',
+            versionInfo: '• improve performance\n• update libraries'
+        },{
             versionName: 'Version 1.0.0',
             versionInfo: '• initial release'
         }]

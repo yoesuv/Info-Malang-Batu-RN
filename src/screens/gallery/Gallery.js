@@ -1,12 +1,12 @@
-import React from "react";
-import { View, Text, FlatList, ActivityIndicator, StyleSheet } from "react-native";
+import React, { Component } from "react";
+import { View, FlatList, ActivityIndicator, StyleSheet } from "react-native";
 import { connect } from 'react-redux';
 
 import { getGallery } from '../../store/actions/index';
 
 import ItemGallery from '../../components/ItemGallery';
 
-class GalleryScreen extends React.Component {
+class GalleryScreen extends Component {
 
     componentDidMount() {
         this.props.onGetGallery();

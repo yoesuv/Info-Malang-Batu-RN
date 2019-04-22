@@ -1,9 +1,9 @@
-import React from "react";
-import { View, Text, Image, StyleSheet } from "react-native";
+import React, { Component } from "react";
+import { View, Image, StyleSheet } from "react-native";
 
 import AppTextRegular from '../../components/AppTextRegular';
 
-class DetailGalleryScreen extends React.Component {
+class DetailGalleryScreen extends Component {
 
     constructor(props){
         super(props)

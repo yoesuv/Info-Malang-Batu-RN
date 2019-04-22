@@ -1,10 +1,10 @@
-import React from "react";
-import { View, Text, Image, StyleSheet } from "react-native";
+import React, { Component } from "react";
+import { View, Image, StyleSheet } from "react-native";
 
 import AppTextBold from '../../components/AppTextBold';
 import AppTextRegular from '../../components/AppTextRegular';
 
-class DetailListPlaceScreen extends React.Component {
+class DetailListPlaceScreen extends Component {
 
     constructor(props){
         super(props)
