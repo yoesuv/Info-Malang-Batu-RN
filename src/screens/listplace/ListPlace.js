@@ -1,12 +1,12 @@
-import React from "react";
-import { View, Text, FlatList, ActivityIndicator, StyleSheet } from "react-native";
+import React, { Component } from "react";
+import { View, FlatList, ActivityIndicator, StyleSheet } from "react-native";
 import { connect } from 'react-redux';
 
 import { getListPlace } from '../../store/actions/index';
 
 import ItemPlace from '../../components/ItemPlace';
 
-class ListPlaceScreen extends React.Component {
+class ListPlaceScreen extends Component {
 
     componentDidMount() {
         this.props.onGetListPlace();

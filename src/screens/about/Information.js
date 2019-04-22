@@ -1,16 +1,16 @@
-import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import React, { Component } from "react";
+import { View, StyleSheet } from "react-native";
 
 import AppTextBold from '../../components/AppTextBold';
 import AppTextRegular from '../../components/AppTextRegular';
 
-class InformationScreen extends React.Component {
+class InformationScreen extends Component {
     render () {
         return (
             <View style={styles.container}>
                 <AppTextBold style={styles.textTitle}>Info Malang Batu</AppTextBold>
                 <AppTextRegular>React Native Version</AppTextRegular>
-                <AppTextRegular>Version 1.0.0</AppTextRegular>
+                <AppTextRegular>Version 1.0.1</AppTextRegular>
             </View>
         )
     }
