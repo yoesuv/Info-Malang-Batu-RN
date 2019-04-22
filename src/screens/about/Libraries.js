@@ -46,21 +46,24 @@ class LibrariesScreen extends Component {
     }
 
     render () {
+
+        let content = (<FlatList
+            style={styles.containerFlatList}
+            data={this.state.libs}
+            renderItem={
+                ({item, index}) => (
+                    <ItemLibraries
+                        name={item.name}
+                        link={item.link}
+                        license={item.license}/>
+                )
+            }
+            keyExtractor={(item, index) => index.toString()}
+        />);
+
         return (
             <View>
-                <FlatList
-                    style={styles.containerFlatList}
-                    data={this.state.libs}
-                    renderItem={
-                        ({item, index}) => (
-                            <ItemLibraries
-                                name={item.name}
-                                link={item.link}
-                                license={item.license}/>
-                        )
-                    }
-                    keyExtractor={(item, index) => index.toString()}
-                />
+                { content }
             </View>
         )
     }
