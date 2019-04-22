@@ -1,9 +1,9 @@
 import { SET_LIST_PLACE, SET_GALLERY, SET_MAP_PINS } from '../actions/actionTypes';
 
 const initialState = {
-    places: [],
-    galleries: [],
-    pins: []
+    places: [{nama:'', lokasi:'', gambar:''}],
+    galleries: [{caption:'', image:'', thumbnail:''}],
+    pins: [{name:'', latitude:0, longitude:0}]
 }
 
 const reducer = (state = initialState, action) => {
