@@ -6,7 +6,7 @@
 React Native Version, click [here](https://github.com/yoesuv/Info-Malang-Batu) for android native version.<br/>
 download APK File [here](https://drive.google.com/file/d/1z4_xExLBjPlOpOEts6MZ3FLS8ZOuqYKf/view?usp=sharing)
 * React 16.8.6
-* React Native 0.5.94
+* React Native 0.5.95
 
 :sparkles: tested on Android only
 
