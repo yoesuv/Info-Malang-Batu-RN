@@ -75,7 +75,7 @@ class MapLocationScreen extends Component {
                     visible={this.state.dialog}>
                     <DialogContent>
                         <View style={styles.dialogContainer}>
-                            <Image source={iconApproved} />
+                            <Image style={styles.dialogImage} source={iconApproved} />
                             <AppTextBold>Location Enabled!</AppTextBold>
                         </View>
                     </DialogContent>
@@ -128,6 +128,11 @@ const styles = StyleSheet.create({
         paddingTop: 16,
         paddingLeft: 16,
         paddingRight: 16
+    },
+    dialogImage: {
+        marginBottom: 8,
+        width: 100,
+        height: 100
     }
 });
 
