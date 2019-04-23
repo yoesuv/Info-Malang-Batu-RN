@@ -17,10 +17,6 @@ class GalleryScreen extends Component {
         this.props.navigation.navigate('DetailGallery', {selectedGallery});
     }
 
-    swipeRefresh = () => {
-        alert("Swipe Refresh")
-    }
-
     render () {
 
         let content = (<FlatList

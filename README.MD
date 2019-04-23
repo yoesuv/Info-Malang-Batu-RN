@@ -1,4 +1,4 @@
-## Info Malang Batu 1.0.1 ##
+## Info Malang Batu 1.0.2 ##
 
 #### Whats new? #####
 * :hammer: refactoring code
