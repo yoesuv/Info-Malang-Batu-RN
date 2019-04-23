@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, FlatList, ActivityIndicator, StyleSheet } from "react-native";
+import { View, FlatList, ActivityIndicator, RefreshControl, StyleSheet } from "react-native";
 import { connect } from 'react-redux';
 
 import { getGallery } from '../../store/actions/index';
@@ -17,6 +17,10 @@ class GalleryScreen extends Component {
         this.props.navigation.navigate('DetailGallery', {selectedGallery});
     }
 
+    swipeRefresh = () => {
+        alert("Swipe Refresh")
+    }
+
     render () {
 
         let content = (<FlatList
@@ -30,6 +34,12 @@ class GalleryScreen extends Component {
             }
             numColumns={3}
             keyExtractor={(item, index) => index.toString()}
+            refreshControl={
+                <RefreshControl
+                    colors={["#779ECB"]}
+                    refreshing={this.props.isLoading}
+                    onRefresh={this.props.onGetGallery}/>
+            }
         />);
 
         if (this.props.isLoading) {
