@@ -1,19 +1,19 @@
 import { SET_LIST_PLACE, SET_GALLERY, SET_MAP_PINS } from './actionTypes';
 import { BASE_URL } from '../../data/Constants';
 
-import { uiStartLoading, uiStopLoading, uiStartLoadingGallery, uiStopLoadingGallery } from './index';
+import { uiStartLoadingList, uiStopLoadingList, uiStartLoadingGallery, uiStopLoadingGallery } from './index';
 
 export const getListPlace = () => {
     return dispatch => {
-        dispatch(uiStartLoading());
+        dispatch(uiStartLoadingList());
         fetch(BASE_URL+"List_place_malang_batu.json")
         .then((response) => response.json())
         .then((responseJson) => {
-            dispatch(uiStopLoading());
+            dispatch(uiStopLoadingList());
             dispatch(setListPlace(responseJson))
         })
         .catch((err) => {
-            dispatch(uiStopLoading());
+            dispatch(uiStopLoadingList());
             console.log(err);
         });
     };

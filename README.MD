@@ -1,6 +1,7 @@
 ## Info Malang Batu 1.0.2 ##
 
 #### Whats new? #####
+* :sparkles: add swipe refresh
 * :hammer: refactoring code
 * :arrow_up: upgrade libraries
 

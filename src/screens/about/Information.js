@@ -10,7 +10,7 @@ class InformationScreen extends Component {
             <View style={styles.container}>
                 <AppTextBold style={styles.textTitle}>Info Malang Batu</AppTextBold>
                 <AppTextRegular>React Native Version</AppTextRegular>
-                <AppTextRegular>Version 1.0.1</AppTextRegular>
+                <AppTextRegular>Version 1.0.2</AppTextRegular>
             </View>
         )
     }
