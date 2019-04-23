@@ -3,10 +3,12 @@ import thunk from 'redux-thunk';
 
 import dataReducer from './reducers/myData';
 import uiReducer from './reducers/ui';
+import uiReducerGallery from './reducers/uiGallery';
 
 const rootReducer = combineReducers({
     dataConfigure: dataReducer,
-    uiConfigure: uiReducer
+    uiConfigure: uiReducer,
+    uiConfigureGallery: uiReducerGallery
 });
 
 let composeEnhanchers = compose;

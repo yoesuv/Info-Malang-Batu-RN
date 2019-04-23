@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
 const mapStateToProps = state => {
     return {
         galleries: state.dataConfigure.galleries,
-        isLoading: state.uiConfigure.isLoading
+        isLoading: state.uiConfigureGallery.isLoadingGallery
     }
 }
 
