@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, ImageBackground, TouchableOpacity, StyleSheet } from 'react-native';
 
-import AppTextBold from './AppTextBold';
-import AppTextRegular from './AppTextRegular';
+import AppTextBold from './texts/AppTextBold';
+import AppTextRegular from './texts/AppTextRegular';
 
 const itemPlace = (props) => {
         console.log(props)

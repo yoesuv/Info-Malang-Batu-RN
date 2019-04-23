@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { View, Image, StyleSheet } from "react-native";
 
-import AppTextBold from '../../components/AppTextBold';
-import AppTextRegular from '../../components/AppTextRegular';
+import AppTextBold from '../../components/texts/AppTextBold';
+import AppTextRegular from '../../components/texts/AppTextRegular';
 
 class DetailListPlaceScreen extends Component {
 

@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 
-import AppTextBold from './AppTextBold';
-import AppTextRegular from './AppTextRegular';
-import AppTextConsola from './AppTextConsola';
+import AppTextBold from './texts/AppTextBold';
+import AppTextRegular from './texts/AppTextRegular';
+import AppTextConsola from './texts/AppTextConsola';
 
 import { THEME_COLOR } from '../data/Colors';
 

@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 
-import AppTextBold from './AppTextBold';
-import AppTextRegular from './AppTextRegular';
+import AppTextBold from './texts/AppTextBold';
+import AppTextRegular from './texts/AppTextRegular';
 
 const itemChangelog = (props) => {
     return <View style={styles.container}>

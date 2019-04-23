@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { View, Image, StyleSheet } from "react-native";
 
-import AppTextRegular from '../../components/AppTextRegular';
+import AppTextRegular from '../../components/texts/AppTextRegular';
 
 class DetailGalleryScreen extends Component {
 

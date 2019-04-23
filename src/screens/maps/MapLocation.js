@@ -9,8 +9,8 @@ import { getPins } from '../../store/actions/index';
 import { DEFAULT_LATITUDE, DEFAULT_LONGITUDE } from '../../data/Constants';
 import { MAP_STYLE } from '../../data/MapStyle';
 import Icon from '../../components/Icon';
-import AppTextBold from '../../components/AppTextBold';
-import AppTextRegular from '../../components/AppTextRegular';
+import AppTextBold from '../../components/texts/AppTextBold';
+import AppTextRegular from '../../components/texts/AppTextRegular';
 
 import iconRefresh from '../../images/ic_action_refresh.png';
 import iconMarker from '../../images/ic_pin.png';
