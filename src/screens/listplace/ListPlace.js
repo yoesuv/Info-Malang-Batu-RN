@@ -1,10 +1,12 @@
 import React, { Component } from "react";
-import { View, FlatList, ActivityIndicator, StyleSheet } from "react-native";
+import { View, FlatList, ActivityIndicator, RefreshControl, StyleSheet } from "react-native";
 import { connect } from 'react-redux';
 
 import { getListPlace } from '../../store/actions/index';
 
 import ItemPlace from '../../components/ItemPlace';
+
+import { THEME_COLOR } from '../../data/Colors';
 
 class ListPlaceScreen extends Component {
 
@@ -31,6 +33,12 @@ class ListPlaceScreen extends Component {
                 )
             }
             keyExtractor={(item, index) => index.toString()}
+            refreshControl={
+                <RefreshControl
+                    colors={[THEME_COLOR]}
+                    refreshing={this.props.isLoading}
+                    onRefresh={this.props.onGetListPlace}/>
+            }
         />);
 
         if (this.props.isLoading) {

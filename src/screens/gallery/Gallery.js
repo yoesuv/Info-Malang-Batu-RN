@@ -6,6 +6,8 @@ import { getGallery } from '../../store/actions/index';
 
 import ItemGallery from '../../components/ItemGallery';
 
+import { THEME_COLOR } from '../../data/Colors';
+
 class GalleryScreen extends Component {
 
     componentDidMount() {
@@ -32,7 +34,7 @@ class GalleryScreen extends Component {
             keyExtractor={(item, index) => index.toString()}
             refreshControl={
                 <RefreshControl
-                    colors={["#779ECB"]}
+                    colors={[THEME_COLOR]}
                     refreshing={this.props.isLoading}
                     onRefresh={this.props.onGetGallery}/>
             }
