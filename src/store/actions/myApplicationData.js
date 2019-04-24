@@ -2,7 +2,7 @@ import { SET_LIST_PLACE, SET_GALLERY, SET_MAP_PINS } from './actionTypes';
 import { BASE_URL } from '../../data/Constants';
 
 import { uiStartLoadingList, uiStopLoadingList, uiNetworkErrorList,
-    uiStartLoadingGallery, uiStopLoadingGallery } from './index';
+    uiStartLoadingGallery, uiStopLoadingGallery, uiNetworkErrorGallery } from './index';
 
 export const getListPlace = () => {
     return dispatch => {
@@ -40,6 +40,7 @@ export const getGallery = () => {
         })
         .catch((err) => {
             dispatch(uiStopLoadingGallery());
+            dispatch(uiNetworkErrorGallery());
             console.log(err);
         });
     };

@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { getGallery } from '../../store/actions/index';
 
 import ItemGallery from '../../components/ItemGallery';
+import ViewError from '../../components/views/ViewError';
 
 import { THEME_COLOR } from '../../data/Colors';
 
@@ -20,6 +21,11 @@ class GalleryScreen extends Component {
     }
 
     render () {
+
+        const contentError = (
+            <ViewError
+                onPress={this.props.onGetGallery}/>
+        )
 
         let content = (<FlatList
             data={this.props.galleries}
@@ -46,7 +52,7 @@ class GalleryScreen extends Component {
 
         return (
             <View style={styles.container}>
-                { content }
+                { this.props.isNetworkError ? contentError : content }
             </View>
         )
     }
@@ -64,7 +70,8 @@ const styles = StyleSheet.create({
 const mapStateToProps = state => {
     return {
         galleries: state.dataConfigure.galleries,
-        isLoading: state.uiConfigureGallery.isLoadingGallery
+        isLoading: state.uiConfigureGallery.isLoadingGallery,
+        isNetworkError: state.uiConfigureGallery.isNetworkError
     }
 }
 
