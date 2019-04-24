@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { getListPlace } from '../../store/actions/index';
 
 import ItemPlace from '../../components/ItemPlace';
+import ViewError from '../../components/views/ViewError';
 
 import { THEME_COLOR } from '../../data/Colors';
 
@@ -20,6 +21,11 @@ class ListPlaceScreen extends Component {
     }
 
     render () {
+
+        const contentError = (
+            <ViewError
+                onPress={this.props.onGetListPlace}/>
+        );
 
         let content = (<FlatList
             data={this.props.places}
@@ -47,7 +53,7 @@ class ListPlaceScreen extends Component {
 
         return (
             <View style={styles.container}>
-                { content }
+                { this.props.isNetworkError ? contentError : content }
             </View>
         )
     }
@@ -65,7 +71,8 @@ const styles = StyleSheet.create({
 const mapStateToProps = state => {
     return {
         places: state.dataConfigure.places,
-        isLoading: state.uiConfigure.isLoading
+        isLoading: state.uiConfigure.isLoading,
+        isNetworkError: state.uiConfigure.isNetworkError
     }
 }
 
