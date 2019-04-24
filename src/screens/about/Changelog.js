@@ -8,7 +8,7 @@ class ChangelogScreen extends Component {
     state = {
         changelogs: [{
             versionName: 'Version 1.0.2',
-            versionInfo: '• swipe refresh list place\n• swipe refresh gallery\n• update libraries'
+            versionInfo: '• swipe refresh list place\n• swipe refresh gallery\n• add ui network error'
         },{
             versionName: 'Version 1.0.1',
             versionInfo: '• improve performance\n• update libraries'
