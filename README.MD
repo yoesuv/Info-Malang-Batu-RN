@@ -9,7 +9,7 @@ download APK File [here](https://drive.google.com/file/d/1EG2ESFm1cx4Cs8Q3TAZ9ZZ
 * React 16.8.6
 * React Native 0.59.9
 
-:sparkles: tested on Android only
+:sparkles: tested on Android only<br/>
 :ambulance: run with npx jetifier
 
 ### Screenshot Android ###
