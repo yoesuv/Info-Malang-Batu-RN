@@ -21,7 +21,6 @@
     "react-redux": "^7.1.1",
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0",
-    "rn-viewpager": "^1.2.9"
   },
   "devDependencies": {
     "@babel/core": "7.6.2",

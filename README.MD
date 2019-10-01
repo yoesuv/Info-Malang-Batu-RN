@@ -24,7 +24,6 @@ download APK File [here](https://drive.google.com/file/d/1EG2ESFm1cx4Cs8Q3TAZ9ZZ
 * [React Navigation](https://github.com/react-navigation/react-navigation)
 * [React Native Maps](https://github.com/react-native-community/react-native-maps)
 * [React Native Popup Dialog](https://github.com/jacklam718/react-native-popup-dialog)
-* [React Native ViewPager](https://github.com/zbtang/React-Native-ViewPager)
 
 ### License ###
 
