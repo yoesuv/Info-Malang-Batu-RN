@@ -1,4 +1,4 @@
-import { createStackNavigator } from "react-navigation";
+import { createStackNavigator } from "react-navigation-stack";
 
 import { THEME_COLOR, HEADER_TINT_COLOR } from '../data/Colors';
 import { MyHeader } from './Header';
