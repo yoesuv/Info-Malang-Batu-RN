@@ -14,8 +14,8 @@
     "react-native-maps": "^0.26.0",
     "react-native-popup-dialog": "^0.18.2",
     "react-navigation": "^3.11.0",
-    "react-redux": "^7.0.3",
-    "redux": "^4.0.1",
+    "react-redux": "^7.1.1",
+    "redux": "^4.0.4",
     "redux-thunk": "^2.3.0",
     "rn-viewpager": "^1.2.9"
   },
