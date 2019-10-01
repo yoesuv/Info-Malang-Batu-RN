@@ -161,9 +161,14 @@ android {
             }
         }
     }
+    packagingOptions {
+        pickFirst '**/libjsc.so'
+        pickFirst '**/libc++_shared.so'
+    }
 }
 
 dependencies {
+    implementation "org.webkit:android-jsc:r241213"
     implementation project(':react-native-reanimated')
     implementation project(':react-native-maps')
     implementation project(':react-native-gesture-handler')
