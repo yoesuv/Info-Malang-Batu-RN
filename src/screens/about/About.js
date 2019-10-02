@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { View, StyleSheet } from "react-native";
+import ViewPager from "@react-native-community/viewpager";
 
 import { THEME_COLOR } from '../../data/Colors';
 
@@ -12,9 +13,20 @@ class AboutScreen extends Component {
 
     render () {
         return (
-            <View style={{flex:1}}>
-
-            </View>
+            <ViewPager style={{flex:1}}>
+                <View key="1">
+                    <InformationScreen />
+                </View>
+                <View key="2">
+                    <ChangelogScreen />
+                </View>
+                <View key="3">
+                    <ThanksScreen />
+                </View>
+                <View key="4">
+                    <LibrariesScreen />
+                </View>
+            </ViewPager>
         )
     }
 
