@@ -3,7 +3,7 @@ import { View, FlatList, StyleSheet } from "react-native";
 
 import ItemLibraries from '../../components/ItemLibrary';
 
-import { LICENSE_REACT_NATIVE, LICENSE_REACT_NAVIGATION, LICENSE_REACT_REDUX, LICENSE_REACT_NATIVE_MAPS, LICENSE_REACT_NATIVE_POPUP_DIALOG } from '../../data/Constants';
+import { LICENSE_REACT_NATIVE, LICENSE_REACT_NAVIGATION, LICENSE_REACT_REDUX, LICENSE_REACT_NATIVE_MAPS, LICENSE_REACT_NATIVE_POPUP_DIALOG, LICENSE_REACT_NAVIGATION_STACK } from '../../data/Constants';
 
 class LibrariesScreen extends Component {
 
@@ -17,6 +17,16 @@ class LibrariesScreen extends Component {
                 name: 'React Navigation',
                 link: 'https://reactnavigation.org/',
                 license: LICENSE_REACT_NAVIGATION
+            },
+            {
+                name: 'React Navigation Stack',
+                link: 'https://github.com/react-navigation/stack',
+                license: LICENSE_REACT_NAVIGATION_STACK
+            },
+            {
+                name: 'React Navigation Tabs',
+                link: 'https://github.com/react-navigation/tabs',
+                license: LICENSE_REACT_NAVIGATION_STACK
             },
             {
                 name: 'React Redux',
@@ -39,9 +49,9 @@ class LibrariesScreen extends Component {
                 license: LICENSE_REACT_NATIVE_POPUP_DIALOG
             },
             {
-                name: 'React Native ViewPager',
-                link: 'https://github.com/zbtang/React-Native-ViewPager',
-                license: '\n'
+                name: 'React Native Tab View',
+                link: 'https://github.com/react-native-community/react-native-tab-view',
+                license: LICENSE_REACT_NAVIGATION_STACK
             }]
     }
 

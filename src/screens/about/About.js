@@ -28,7 +28,7 @@ const LibrariesRoute = () => (
 class AboutScreen extends Component {
 
     state = {
-        index: 0,
+        index: -1,
         routes: [
             {key: 'information', title: 'Information'},
             {key: 'changelog', title: 'Changelog'},
