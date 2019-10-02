@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, Dimensions } from "react-native";
 import ViewPager from "@react-native-community/viewpager";
+import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
 
 import { THEME_COLOR } from '../../data/Colors';
 
@@ -9,48 +10,64 @@ import ChangelogScreen from './Changelog';
 import ThanksScreen from './Thanks';
 import LibrariesScreen from './Libraries';
 
+const InformationRoute = () => (
+    <InformationScreen />
+)
+
+const ChangelogRoute = () => (
+    <ChangelogScreen  />
+)
+
+const ThanksRoute = () => (
+    <ThanksScreen />
+)
+
+const LibrariesRoute = () => (
+    <LibrariesScreen />
+)
+
 class AboutScreen extends Component {
+
+    state = {
+        index: 0,
+        routes: [
+            {key: 'information', title: 'Information'},
+            {key: 'changelog', title: 'Changelog'},
+            {key: 'thanks', title: 'Thanks'},
+            {key: 'libraries', title: 'Libraries'}
+        ]
+    }
 
     render () {
         return (
-            <ViewPager style={{flex:1}}>
-                <View key="1">
-                    <InformationScreen />
-                </View>
-                <View key="2">
-                    <ChangelogScreen />
-                </View>
-                <View key="3">
-                    <ThanksScreen />
-                </View>
-                <View key="4">
-                    <LibrariesScreen />
-                </View>
-            </ViewPager>
+            <TabView
+                navigationState={this.state}
+                renderScene={SceneMap({
+                      information: InformationRoute,
+                      changelog: ChangelogRoute,
+                      thanks: ThanksRoute,
+                      libraries: LibrariesRoute
+                })}
+                renderTabBar = { props =>
+                    <TabBar
+                        {...props}
+                        scrollEnabled
+                        indicatorStyle={{ backgroundColor: 'white' }}
+                        style={{ backgroundColor: THEME_COLOR }}
+                        tabStyle={{width: 'auto'}}
+                    />
+                }
+                onIndexChange={index => this.setState({ index })}
+                initialLayout={{ width: Dimensions.get('window').width }}
+            />
         )
     }
 
 }
 
 const styles = StyleSheet.create({
-    viewPagerContainer: {
-        flex:1,
-        flexDirection: 'column-reverse',
-    },
-    indicatorContainer: {
+    tabBar: {
         backgroundColor: THEME_COLOR
-    },
-    indicatorText: {
-        fontSize: 14,
-        color: 0xFFFFFF99
-    },
-    indicatorSelectedText: {
-        fontSize: 14,
-        color: 0xFFFFFFFF
-    },
-    selectedBorderStyle: {
-        height: 3,
-        backgroundColor: 'white'
     }
 })
 
