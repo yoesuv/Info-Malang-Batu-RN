@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { View, StyleSheet, Dimensions } from "react-native";
-import ViewPager from "@react-native-community/viewpager";
 import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
 
 import { THEME_COLOR } from '../../data/Colors';
