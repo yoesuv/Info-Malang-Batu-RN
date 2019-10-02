@@ -8,7 +8,7 @@ class ChangelogScreen extends Component {
     state = {
         changelogs: [{
             versionName: 'Version 1.0.3',
-            versionInfo: '• update libraries\n• Support Android 10'
+            versionInfo: '• update libraries\n• support android 10'
         },{
             versionName: 'Version 1.0.2',
             versionInfo: '• swipe refresh list place\n• swipe refresh gallery\n• add ui network error'
