@@ -58,6 +58,7 @@ class AboutScreen extends Component {
                 }
                 onIndexChange={index => this.setState({ index })}
                 initialLayout={{ width: Dimensions.get('window').width }}
+                swipeEnabled={false}
             />
         )
     }
