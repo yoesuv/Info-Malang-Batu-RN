@@ -116,8 +116,8 @@ android {
         applicationId "com.infomalangbaturn"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 3
-        versionName "1.0.2"
+        versionCode 4
+        versionName "1.0.3"
         setProperty("archivesBaseName", applicationId+"-v"+versionCode+"("+versionName+")")
     }
     signingConfigs {
@@ -161,13 +161,19 @@ android {
             }
         }
     }
+    packagingOptions {
+        pickFirst '**/libjsc.so'
+        pickFirst '**/libc++_shared.so'
+    }
 }
 
 dependencies {
+    implementation "org.webkit:android-jsc:r241213"
+    implementation project(':react-native-reanimated')
     implementation project(':react-native-maps')
     implementation project(':react-native-gesture-handler')
     implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
+    implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation "com.facebook.react:react-native:+"  // From node_modules
 }
 
