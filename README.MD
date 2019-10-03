@@ -5,7 +5,7 @@
 * :arrow_up: upgrade Libraries
 
 React Native Version, click [here](https://github.com/yoesuv/Info-Malang-Batu) for Android Native version.<br/>
-download APK File [here](https://drive.google.com/file/d/1EG2ESFm1cx4Cs8Q3TAZ9ZZrOACKwanH1/view?usp=sharing)
+download APK File [here](https://drive.google.com/file/d/10CQUBQPWfuTXRVqwTxKiPd1f5a7X_3uy/view?usp=sharing)
 * React 16.10.1
 * React Native 0.61.1
 
