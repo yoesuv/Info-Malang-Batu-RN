@@ -4,7 +4,7 @@
 * :arrow_up: udate Libraries
 
 React Native Version, click [here](https://github.com/yoesuv/Info-Malang-Batu) for Android Native version.<br/>
-download APK File [here](https://drive.google.com/file/d/10CQUBQPWfuTXRVqwTxKiPd1f5a7X_3uy/view?usp=sharing)
+download APK File [here](https://drive.google.com/file/d/1HjCwlJLFz2E8xWaHnLgRsi_cQ4MT1L8M/view?usp=sharing)
 * React 16.12.0
 * React Native 0.61.1
 
