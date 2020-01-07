@@ -1,12 +1,11 @@
-## Info Malang Batu 1.0.3 ##
+## Info Malang Batu 1.0.4 ##
 
 #### Whats new? #####
-* :tractor: migrate to AndroidX
-* :arrow_up: upgrade Libraries
+* :arrow_up: udate Libraries
 
 React Native Version, click [here](https://github.com/yoesuv/Info-Malang-Batu) for Android Native version.<br/>
 download APK File [here](https://drive.google.com/file/d/10CQUBQPWfuTXRVqwTxKiPd1f5a7X_3uy/view?usp=sharing)
-* React 16.10.1
+* React 16.12.0
 * React Native 0.61.1
 
 :sparkles: tested on Android only
