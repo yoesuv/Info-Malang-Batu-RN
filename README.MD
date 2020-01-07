@@ -13,7 +13,7 @@ download APK File [here](https://drive.google.com/file/d/10CQUBQPWfuTXRVqwTxKiPd
 ### Screenshot Android ###
 | ![](https://github.com/yoesuv/Info-Malang-Batu-RN/blob/master/screenshot/Screenshot_20191003-095756.jpg) | ![](https://github.com/yoesuv/Info-Malang-Batu-RN/blob/master/screenshot/Screenshot_20191003-095808.jpg) | ![](https://github.com/yoesuv/Info-Malang-Batu-RN/blob/master/screenshot/Screenshot_20191003-095817.jpg) | ![](https://github.com/yoesuv/Info-Malang-Batu-RN/blob/master/screenshot/Screenshot_20191003-095824.jpg) |
 | :---: | :---: | :---: | :---: |
-| ![](https://github.com/yoesuv/Info-Malang-Batu-RN/blob/master/screenshot/Screenshot_20191003-095834.jpg) | ![](https://github.com/yoesuv/Info-Malang-Batu-RN/blob/master/screenshot/Screenshot_20191003-095840.jpg) | ![](https://github.com/yoesuv/Info-Malang-Batu-RN/blob/master/screenshot/Screenshot_20191003-095849.jpg) | ![](https://github.com/yoesuv/Info-Malang-Batu-RN/blob/master/screenshot/Screenshot_20191003-100022.jpg) |
+| ![](https://github.com/yoesuv/Info-Malang-Batu-RN/blob/master/screenshot/Screenshot_20191003-095834.jpg) | ![](https://i.imgur.com/iZ6fGBP.jpg) | ![](https://i.imgur.com/m8IW3sZ.jpg) | ![](https://github.com/yoesuv/Info-Malang-Batu-RN/blob/master/screenshot/Screenshot_20191003-100022.jpg) |
 
 ### Libraries used in this project ###
 * [Android JSC](https://github.com/facebook/android-jsc)
