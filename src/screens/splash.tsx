@@ -1,4 +1,5 @@
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View } from "react-native";
+import { Text } from 'react-native-paper';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { useNavigation } from '@react-navigation/native';
 import { RootStackParamList } from "./root-stack-params";
@@ -10,7 +11,7 @@ export default function SplashScreen() {
     const navigation = useNavigation<splashScreenProp>();
 
     setTimeout(() => {
-        navigation.navigate('Home');
+          navigation.navigate('Home');
           navigation.reset({
             index: 0,
             routes: [{ name: 'Home' }]
@@ -30,8 +31,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     textSplash: {
-        fontSize: 28,
+        color: 'black',
         fontWeight: 'bold',
-        color: 'black'
+        fontSize: 28,
       }
 });
