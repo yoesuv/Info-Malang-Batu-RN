@@ -1,6 +1,7 @@
 import { FlashList } from "@shopify/flash-list";
 import { StyleSheet, View } from "react-native";
 import { Text, ActivityIndicator, Appbar } from 'react-native-paper';
+import ItemPlace from "../components/item-place";
 import { THEME_COLOR } from "../data/colors";
 import { PlaceModel } from "../models/place-model";
 
@@ -15,7 +16,7 @@ export default function FragmentListPlace() {
             <Appbar.Content title="List Place" />
         </Appbar.Header>
         { status === 'loading' && <LoadingView /> }
-        { status === 'success' && <Text>SHOW DATA</Text>}
+        { status === 'success' && <ListPlaceView places={data} /> }
     </View>
 }
 
@@ -25,12 +26,12 @@ const LoadingView = () => {
     </View>
 }
 
-const ListPlaceView = (places?: PlaceModel[]) => {
-    return <View>
+const ListPlaceView = ({places}: {places: PlaceModel[]}) => {
+    return <View style={styles.contentList}>
         <FlashList 
             data={places}
             renderItem={({item}) => (
-                <Text>{item.nama}</Text>
+                <ItemPlace place={item} />
             )}
             keyExtractor = {(_, index) => index.toString()}
             estimatedItemSize={places?.length ? places?.length : 0}
@@ -47,5 +48,8 @@ const styles = StyleSheet.create({
     contentLoading: {
         flex: 1,
         justifyContent: 'center',
+    },
+    contentList: {
+        flex: 1,
     },
 });
