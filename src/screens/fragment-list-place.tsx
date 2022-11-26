@@ -13,7 +13,7 @@ export default function FragmentListPlace() {
 
     return <View style={styles.container}>
         <Appbar.Header mode="small" style={{ backgroundColor: THEME_COLOR }}>
-            <Appbar.Content title="List Place" />
+            <Appbar.Content title="List Place" titleStyle={styles.title} />
         </Appbar.Header>
         { status === 'loading' && <LoadingView /> }
         { status === 'success' && <ListPlaceView places={data} /> }
@@ -51,5 +51,10 @@ const styles = StyleSheet.create({
     },
     contentList: {
         flex: 1,
+    },
+    title: {
+        fontSize: 20,
+        fontWeight: 'bold',
+        color: 'white',
     },
 });
