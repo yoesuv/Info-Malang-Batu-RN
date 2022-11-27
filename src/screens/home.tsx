@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { StyleSheet } from "react-native";
 import { BottomNavigation, Text } from 'react-native-paper';
+import FragmentGallery from "./fragment-gallery";
 
 import FragmentListPlace from "./fragment-list-place";
 
-const GalleryPage = () => <Text>Gallery</Text>;
 const MapsPage = () => <Text>Maps</Text>;
 const AboutPage = () => <Text>About Page</Text>;
 
@@ -20,7 +20,7 @@ export default function HomeScreen() {
 
     const renderScene = BottomNavigation.SceneMap({
         list: FragmentListPlace,
-        gallery: GalleryPage,
+        gallery: FragmentGallery,
         maps: MapsPage,
         about: AboutPage,
     });
