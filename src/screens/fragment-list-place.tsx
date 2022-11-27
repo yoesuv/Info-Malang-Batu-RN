@@ -17,7 +17,7 @@ export default function FragmentListPlace() {
     const { data, status } = UseListPlace();
 
     return <View style={styles.container}>
-        <Appbar.Header mode="small" style={{ backgroundColor: THEME_COLOR }}>
+        <Appbar.Header mode="small" statusBarHeight={0} style={{ backgroundColor: THEME_COLOR }} >
             <Appbar.Content title="List Place" titleStyle={styles.title} />
         </Appbar.Header>
         { status === 'loading' && <LoadingView /> }

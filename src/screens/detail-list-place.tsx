@@ -6,7 +6,7 @@ import { THEME_COLOR } from '../data/colors';
 
 export default function DetailListPlaceScreen() {
     return <SafeAreaView style={styles.container}>
-        <Appbar.Header mode="small" style={{ backgroundColor: THEME_COLOR }}>
+        <Appbar.Header mode="small" statusBarHeight={0} style={{ backgroundColor: THEME_COLOR }}>
             <Appbar.Content title="Detail Place" titleStyle={styles.title} />
         </Appbar.Header>
         <Text style={{ fontSize: 20 }}>Detail Place</Text>

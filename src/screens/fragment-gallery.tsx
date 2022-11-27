@@ -4,7 +4,7 @@ import { THEME_COLOR } from '../data/colors';
 
 export default function FragmentGallery() {
     return <View style={styles.container}>
-        <Appbar.Header mode="small" style={{ backgroundColor: THEME_COLOR }}>
+        <Appbar.Header mode="small" statusBarHeight={0} style={{ backgroundColor: THEME_COLOR }}>
             <Appbar.Content title="Gallery" titleStyle={styles.title} />
         </Appbar.Header>
         <Text style={{ fontSize: 20 }}>Gallery</Text>
