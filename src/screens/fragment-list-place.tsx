@@ -34,7 +34,7 @@ const ListPlaceView = ({places}: {places: PlaceModel[]}) => {
                 <ItemPlace place={item} />
             )}
             keyExtractor = {(_, index) => index.toString()}
-            estimatedItemSize={places?.length ? places?.length : 0}
+            estimatedItemSize={places.length}
         />
     </View>
 }
