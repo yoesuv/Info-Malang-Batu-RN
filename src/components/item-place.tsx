@@ -8,7 +8,7 @@ interface TIPlace {
 
 export default function ItemPlace({place}: TIPlace) {
     return <View style={styles.container}>
-        <Image source={{ uri: place.gambar }} />
+        <Image source={{ uri: place.gambar }} style={styles.image}/>
         <View style={styles.textContainer}>
             <Text style={styles.title}>{place.nama}</Text>
             <Text style={styles.location}>{place.lokasi}</Text>
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     },
     image:{
         width: "100%",
-        height: "100%"
+        height: 170,
     },
     textContainer: {
         marginLeft: 8,
