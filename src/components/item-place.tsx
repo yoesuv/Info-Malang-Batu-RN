@@ -1,19 +1,22 @@
 import { StyleSheet, View, Image } from "react-native";
-import { Text } from "react-native-paper";
+import { Text, TouchableRipple } from "react-native-paper";
 import { PlaceModel } from "../models/place-model";
 
 interface TIPlace {
-    place: PlaceModel
+    place: PlaceModel;
+    onItemClik: () => void;
 }
 
-export default function ItemPlace({place}: TIPlace) {
-    return <View style={styles.container}>
-        <Image source={{ uri: place.gambar }} style={styles.image}/>
-        <View style={styles.textContainer}>
-            <Text style={styles.title}>{place.nama}</Text>
-            <Text style={styles.location}>{place.lokasi}</Text>
+export default function ItemPlace({place, onItemClik}: TIPlace) {
+    return <TouchableRipple onPress={onItemClik}>
+        <View style={styles.container}>
+            <Image source={{ uri: place.gambar }} style={styles.image}/>
+            <View style={styles.textContainer}>
+                <Text style={styles.title}>{place.nama}</Text>
+                <Text style={styles.location}>{place.lokasi}</Text>
+            </View>
         </View>
-    </View> 
+    </TouchableRipple>
 }
 
 const styles = StyleSheet.create({
