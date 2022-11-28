@@ -1,6 +1,6 @@
 import { StyleSheet, View } from "react-native";
 import { Appbar } from 'react-native-paper';
-import MapView from 'react-native-maps';
+import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
 
 import { THEME_COLOR } from "../data/colors";
 import { DEFAULT_LATITUDE, DEFAULT_LONGITUDE } from "../data/constants";
@@ -10,12 +10,15 @@ export default function FragmentMaps() {
         <Appbar.Header mode="small" statusBarHeight={0} style={{ backgroundColor: THEME_COLOR }} >
             <Appbar.Content title="Maps" titleStyle={styles.title} />
         </Appbar.Header>
-        <MapView style={styles.map} initialRegion={{
+        <MapView style={styles.map}
+            provider={PROVIDER_GOOGLE}
+            initialRegion={{
             latitude: DEFAULT_LATITUDE,
             longitude: DEFAULT_LONGITUDE,
             latitudeDelta: 0.85,
             longitudeDelta: 0.85,
-        }} />
+            }} 
+        />
     </View>
 }
 

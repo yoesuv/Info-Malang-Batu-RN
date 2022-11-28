@@ -25,7 +25,12 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.yoesuv.InfoMalangBatu"
+      "package": "com.yoesuv.InfoMalangBatu",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyBX5m-lL-f5wyqTs81GUezbJdAEZNArQSM"
+        }
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"
