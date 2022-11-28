@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { StyleSheet } from "react-native";
 import { BottomNavigation, Text } from 'react-native-paper';
+import { THEME_COLOR, THEME_COLOR_200 } from "../data/colors";
 import FragmentGallery from "./fragment-gallery";
 
 import FragmentListPlace from "./fragment-list-place";
@@ -30,6 +31,9 @@ export default function HomeScreen() {
         onIndexChange={setIndex}
         renderScene={renderScene}
         compact={true}
+        barStyle={{ backgroundColor: 'white' }}
+        activeColor={THEME_COLOR}
+        inactiveColor={THEME_COLOR_200}
     /> 
 }
 
