@@ -11,6 +11,8 @@ type detailGalleryScreenProp = StackNavigationProp<RootStackParamList, 'DetailGa
 
 export default function DetailGalleryScreen() {
 
+    const route = useRoute<RouteProp<RootStackParamList, 'DetailGallery'>>();
+    const params = route.params;
     const navigation = useNavigation<detailGalleryScreenProp>();
 
     const pressBack = () => {
@@ -22,6 +24,10 @@ export default function DetailGalleryScreen() {
             <Appbar.BackAction color='white' onPress={pressBack} />
             <Appbar.Content title="Detail Gallery" titleStyle={styles.title} />
         </Appbar.Header>
+        <View style={styles.containerImage}>
+            <Image source={{uri: params.image}} style={styles.containerImage} />
+        </View>
+        <Text style={styles.textDescription}>{ params.caption }</Text>
     </SafeAreaView>
 }
 
@@ -35,5 +41,16 @@ const styles = StyleSheet.create({
         fontSize: 20,
         fontWeight: 'bold',
         color: 'white',
+    },
+    containerImage: {
+        width: "100%",
+        height: 250,
+        backgroundColor: "#EEEEEE",
+    },
+    textDescription: {
+        fontSize: 16,
+        marginTop: 8,
+        marginLeft: 8,
+        marginRight: 8
     },
 })
