@@ -1,11 +1,16 @@
 import { StyleSheet, View } from 'react-native';
 import { Appbar, ActivityIndicator } from 'react-native-paper';
 import { FlashList } from "@shopify/flash-list";
+import { StackNavigationProp } from '@react-navigation/stack';
+import { useNavigation } from '@react-navigation/native';
 
 import { THEME_COLOR } from '../data/colors';
 import UseGallery from '../services/gallery-service';
 import { GalleryModel } from '../models/gallery-model';
 import ItemGallery from '../components/item-gallery';
+import { RootStackParamList } from './root-stack-params';
+
+type homeScreenProp = StackNavigationProp<RootStackParamList, 'Home'>;
 
 export default function FragmentGallery() {
 
@@ -27,11 +32,12 @@ const LoadingView = () => {
 }
 
 const GalleryView = ({galleries}: {galleries: GalleryModel[]}) => {
+    const navigation = useNavigation<homeScreenProp>();
     return <FlashList
         data={galleries}
         renderItem={({item}) => (
             <ItemGallery gallery={item} onItemClick={() => {
-                console.log(`Fragment Gallery # ${item.caption}`);
+                navigation.navigate('DetailGallery', item);
             }}/>
         )}
         keyExtractor = {(_, index) => index.toString()}
