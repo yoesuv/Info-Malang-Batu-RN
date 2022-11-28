@@ -5,8 +5,8 @@ import { THEME_COLOR, THEME_COLOR_200 } from "../data/colors";
 import FragmentGallery from "./fragment-gallery";
 
 import FragmentListPlace from "./fragment-list-place";
+import FragmentMaps from "./fragment-maps";
 
-const MapsPage = () => <Text>Maps</Text>;
 const AboutPage = () => <Text>About Page</Text>;
 
 export default function HomeScreen() {
@@ -22,7 +22,7 @@ export default function HomeScreen() {
     const renderScene = BottomNavigation.SceneMap({
         list: FragmentListPlace,
         gallery: FragmentGallery,
-        maps: MapsPage,
+        maps: FragmentMaps,
         about: AboutPage,
     });
 
