@@ -4,6 +4,7 @@ import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
 
 import { THEME_COLOR } from "../data/colors";
 import { DEFAULT_LATITUDE, DEFAULT_LONGITUDE } from "../data/constants";
+import { MAP_STYLE } from "../data/maps-style";
 
 export default function FragmentMaps() {
     return <View style={styles.container}>
@@ -13,11 +14,12 @@ export default function FragmentMaps() {
         <MapView style={styles.map}
             provider={PROVIDER_GOOGLE}
             initialRegion={{
-            latitude: DEFAULT_LATITUDE,
-            longitude: DEFAULT_LONGITUDE,
-            latitudeDelta: 0.85,
-            longitudeDelta: 0.85,
-            }} 
+                latitude: DEFAULT_LATITUDE,
+                longitude: DEFAULT_LONGITUDE,
+                latitudeDelta: 0.85,
+                longitudeDelta: 0.85,
+            }}
+            customMapStyle={MAP_STYLE}
         />
     </View>
 }
