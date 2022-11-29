@@ -1,6 +1,7 @@
 import { StyleSheet, View } from "react-native";
 import { Appbar, ActivityIndicator } from 'react-native-paper';
 import MapView, { Marker, PROVIDER_GOOGLE } from 'react-native-maps';
+import { Asset, useAssets } from 'expo-asset';
 
 import { THEME_COLOR } from "../data/colors";
 import { DEFAULT_LATITUDE, DEFAULT_LONGITUDE } from "../data/constants";
@@ -27,6 +28,12 @@ const LoadingView = () => {
 }
 
 const MapsPinView = () => {
+    
+    const [ iconMarker, iconMarkerError ] = useAssets([require('../images/ic_pin.png'), require('../images/ic_pin.png')]);
+    const markers = iconMarker ? iconMarker : null;
+    const marker = markers ? markers[0] : null;
+    const markerUri = marker?.uri
+
     return <MapView 
         style={styles.map}
         provider={PROVIDER_GOOGLE}
@@ -36,8 +43,12 @@ const MapsPinView = () => {
             latitudeDelta: 0.85,
             longitudeDelta: 0.85,
         }}
-        customMapStyle={MAP_STYLE}
-    />
+        customMapStyle={MAP_STYLE}>
+            <Marker
+            coordinate={{latitude: DEFAULT_LATITUDE, longitude: DEFAULT_LONGITUDE}}
+            image={{ uri: markerUri}}
+            />
+        </MapView>
 }
 
 const styles = StyleSheet.create({
