@@ -1,4 +1,44 @@
 {
-  "name": "InfoMalangBatuRN",
-  "displayName": "InfoMalangBatuRN"
+  "expo": {
+    "name": "Info-Malang-Batu",
+    "slug": "Info-Malang-Batu",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.yoesuv.InfoMalangBatu",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyBX5m-lL-f5wyqTs81GUezbJdAEZNArQSM"
+        }
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "0041a1ae-5f19-45ef-99d4-bb8b8893aa15"
+      }
+    }
+  }
 }
