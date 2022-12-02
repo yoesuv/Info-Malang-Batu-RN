@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { StyleSheet } from "react-native";
-import { BottomNavigation, Text } from 'react-native-paper';
+import { BottomNavigation } from 'react-native-paper';
 import { THEME_COLOR, THEME_COLOR_200 } from "../data/colors";
 import FragmentAbout from "./fragment-about";
 import FragmentGallery from "./fragment-gallery";
