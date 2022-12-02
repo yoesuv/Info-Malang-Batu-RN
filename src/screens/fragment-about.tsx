@@ -3,10 +3,7 @@ import { StyleSheet, View, Dimensions } from 'react-native';
 import { Appbar, Text } from 'react-native-paper';
 import { SceneMap, TabView, TabBar } from 'react-native-tab-view';
 import { THEME_COLOR } from '../data/colors';
-
-const TabInformation = () => {
-    return <Text>Tab Information</Text>
-}
+import TabInformation from './tabs/tab-information';
 
 const TabChangelog = () => {
     return <Text>Tab Changelog</Text>
