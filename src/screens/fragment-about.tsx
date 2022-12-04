@@ -5,10 +5,7 @@ import { SceneMap, TabView, TabBar } from 'react-native-tab-view';
 import { THEME_COLOR } from '../data/colors';
 import TabChangelog from './tabs/tab-changelog';
 import TabInformation from './tabs/tab-information';
-
-const TabThanks = () => {
-    return <Text>Tab Thanks</Text>
-}
+import TabThanks from './tabs/tab-thanks';
 
 const TabLibraries = () => {
     return <Text>Tab Libraries</Text>
