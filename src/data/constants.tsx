@@ -25,11 +25,37 @@ export const APP_CHANGELOG = [
 ];
 
 const LICENSE_REACT_NATIVE = "Copyright (c) Facebook, Inc. and its affiliates.\n\nLicensed under MIT License.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.";
-const LICENSE_REACT_NAVIGATION = "Copyright (c) 2017 React Native Community\n\nLicensed under MIT License.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in allcopies or substantial portions of the Software."
-const LICENSE_REACT_NAVIGATION_STACK = "Copyright (c) 2017 React Native Community\n\nLicensed under MIT License.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software."
+const LICENSE_REACT_NAVIGATION = "Copyright (c) 2017 React Native Community\n\nLicensed under MIT License.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in allcopies or substantial portions of the Software.";
+const LICENSE_REACT_NATIVE_MAPS = "Copyright (c) 2017 Airbnb.\n\nLicensed under MIT License.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.";
 
 export const APP_LIBRARIES = [
-    LICENSE_REACT_NATIVE,
-    LICENSE_REACT_NAVIGATION,
-    LICENSE_REACT_NAVIGATION_STACK,
+    {
+        name: 'React Native',
+        link: 'https://reactnative.dev/',
+        license: LICENSE_REACT_NATIVE,
+    },{
+        name: 'Expo',
+        link: 'https://expo.dev/',
+        license: LICENSE_REACT_NATIVE,
+    },{
+        name: 'React Navigation',
+        link: 'https://reactnavigation.org/',
+        license: LICENSE_REACT_NAVIGATION,
+    },{
+        name: 'Axios',
+        link: 'https://axios-http.com/',
+        license: LICENSE_REACT_NATIVE,
+    }, {
+        name: 'React Query',
+        link: 'https://tanstack.com/query/v4',
+        license: LICENSE_REACT_NATIVE,
+    }, {
+        name: 'Flashlist',
+        link: 'https://github.com/Shopify/flash-list',
+        license: LICENSE_REACT_NATIVE,
+    }, {
+        name: 'React Native Maps',
+        link: 'https://github.com/react-native-maps/react-native-maps',
+        license: LICENSE_REACT_NATIVE_MAPS,
+    },
 ];
