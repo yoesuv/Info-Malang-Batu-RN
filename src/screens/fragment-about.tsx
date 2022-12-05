@@ -1,15 +1,12 @@
 import { useState } from 'react';
 import { StyleSheet, View, Dimensions } from 'react-native';
-import { Appbar, Text } from 'react-native-paper';
+import { Appbar } from 'react-native-paper';
 import { SceneMap, TabView, TabBar } from 'react-native-tab-view';
 import { THEME_COLOR } from '../data/colors';
 import TabChangelog from './tabs/tab-changelog';
 import TabInformation from './tabs/tab-information';
+import TabLibraries from './tabs/tab-libraries';
 import TabThanks from './tabs/tab-thanks';
-
-const TabLibraries = () => {
-    return <Text>Tab Libraries</Text>
-}
 
 export default function FragmentAbout() {
 

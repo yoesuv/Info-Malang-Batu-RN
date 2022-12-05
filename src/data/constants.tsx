@@ -23,3 +23,13 @@ export const APP_CHANGELOG = [
         versionInfo: '• initial release',
     },
 ];
+
+const LICENSE_REACT_NATIVE = "Copyright (c) Facebook, Inc. and its affiliates.\n\nLicensed under MIT License.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.";
+const LICENSE_REACT_NAVIGATION = "Copyright (c) 2017 React Native Community\n\nLicensed under MIT License.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in allcopies or substantial portions of the Software."
+const LICENSE_REACT_NAVIGATION_STACK = "Copyright (c) 2017 React Native Community\n\nLicensed under MIT License.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software."
+
+export const APP_LIBRARIES = [
+    LICENSE_REACT_NATIVE,
+    LICENSE_REACT_NAVIGATION,
+    LICENSE_REACT_NAVIGATION_STACK,
+];
