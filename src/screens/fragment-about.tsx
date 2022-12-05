@@ -38,9 +38,10 @@ export default function FragmentAbout() {
                 <TabBar
                     {...props}
                     scrollEnabled
-                    indicatorStyle={{ backgroundColor: 'white' }}
+                    indicatorStyle={{ backgroundColor: 'white', height: 4 }}
                     style={{ backgroundColor: THEME_COLOR }}
                     tabStyle={{width: 'auto'}}
+                    labelStyle={{ fontSize: 16, textTransform: 'none' }}
                 />
             }
         />
