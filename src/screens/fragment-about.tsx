@@ -25,6 +25,17 @@ export default function FragmentAbout() {
         libraries: TabLibraries,
     });
 
+    const renderTabBar = (props: any) => (
+        <TabBar
+            {...props}
+            scrollEnabled={true}
+            indicatorStyle={{ backgroundColor: 'white', height: 4 }}
+            style={{ backgroundColor: THEME_COLOR }}
+            tabStyle={{width: 'auto'}}
+            labelStyle={{ fontSize: 16, textTransform: 'none' }}
+        />
+    );
+
     return <View style={styles.container}>
         <Appbar.Header mode="small" statusBarHeight={0} style={{ backgroundColor: THEME_COLOR }}>
             <Appbar.Content title="About" titleStyle={styles.title} />
@@ -34,16 +45,7 @@ export default function FragmentAbout() {
             navigationState={{ index, routes }}
             renderScene={renderScene}
             onIndexChange={setIndex}
-            renderTabBar = { props =>
-                <TabBar
-                    {...props}
-                    scrollEnabled
-                    indicatorStyle={{ backgroundColor: 'white', height: 4 }}
-                    style={{ backgroundColor: THEME_COLOR }}
-                    tabStyle={{width: 'auto'}}
-                    labelStyle={{ fontSize: 16, textTransform: 'none' }}
-                />
-            }
+            renderTabBar ={renderTabBar}
         />
     </View>
 }
