@@ -3,6 +3,7 @@ import { Text } from 'react-native-paper';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { useNavigation } from '@react-navigation/native';
 import { RootStackParamList } from "./root-stack-params";
+import { THEME_COLOR } from "../data/colors";
 
 type splashScreenProp = StackNavigationProp<RootStackParamList, 'Splash'>;
 
@@ -26,13 +27,13 @@ export default function SplashScreen() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: THEME_COLOR,
         alignItems: 'center',
         justifyContent: 'center',
     },
     textSplash: {
-        color: 'black',
+        color: 'white',
         fontWeight: 'bold',
         fontSize: 28,
-      }
+    },
 });

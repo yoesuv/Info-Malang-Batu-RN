@@ -1,13 +1,12 @@
 import { useState } from "react";
 import { StyleSheet } from "react-native";
-import { BottomNavigation, Text } from 'react-native-paper';
+import { BottomNavigation } from 'react-native-paper';
 import { THEME_COLOR, THEME_COLOR_200 } from "../data/colors";
+import FragmentAbout from "./fragment-about";
 import FragmentGallery from "./fragment-gallery";
 
 import FragmentListPlace from "./fragment-list-place";
 import FragmentMaps from "./fragment-maps";
-
-const AboutPage = () => <Text>About Page</Text>;
 
 export default function HomeScreen() {
 
@@ -23,7 +22,7 @@ export default function HomeScreen() {
         list: FragmentListPlace,
         gallery: FragmentGallery,
         maps: FragmentMaps,
-        about: AboutPage,
+        about: FragmentAbout,
     });
 
     return <BottomNavigation 
