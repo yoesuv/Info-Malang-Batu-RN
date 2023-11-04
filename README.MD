@@ -1,10 +1,10 @@
 ## Info Malang Batu RN ##
 
 #### Whats new? #####
-* :hammer: refactor to project expo
+* :arrow_up: update libraries
 
 Build from [Expo Framework](https://expo.dev/), click [here](https://github.com/yoesuv/Info-Malang-Batu) for Android Native version.  
-Download apk file [here](https://www.dropbox.com/s/fjb5gyi4i5ooguf)
+Download apk file [here](https://e.pcloud.link/publink/show?code=XZeWwsZR3g9T460hrVFRyHRiLDIK00xmrVX)
 
 #### Screenshot ####
 | ![](https://images2.imgbox.com/7f/e5/xlMEXJvW_o.png) | ![](https://i.imgur.com/n9mJ4Z3.png) | ![](https://i.imgur.com/XSFyadz.png) | ![](https://i.imgur.com/vYW9Gbi.png) |
