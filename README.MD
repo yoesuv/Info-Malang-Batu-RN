@@ -1,5 +1,10 @@
 ## Info Malang Batu RN ##
 
+```
+Node js version
+v18.19.1
+```
+
 #### Whats new? #####
 * :arrow_up: update libraries
 
