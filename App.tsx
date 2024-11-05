@@ -1,4 +1,7 @@
-import { DefaultTheme, Provider as PaperProvider } from "react-native-paper";
+import {
+  MD3LightTheme as DefaultTheme,
+  Provider as PaperProvider,
+} from "react-native-paper";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 import AppNavigation from "./src/navigations";
