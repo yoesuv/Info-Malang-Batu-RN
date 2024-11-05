@@ -16,7 +16,9 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     },
@@ -44,9 +46,12 @@
       [
         "expo-font",
         {
-          "fonts": ["./assets/fonts/Pacifico.ttf"]
+          "fonts": [
+            "./assets/fonts/Pacifico.ttf"
+          ]
         }
-      ]
+      ],
+      "expo-asset"
     ]
   }
 }
