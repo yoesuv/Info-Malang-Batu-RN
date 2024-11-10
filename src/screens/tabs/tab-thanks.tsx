@@ -22,5 +22,6 @@ const styles = StyleSheet.create({
   content: {
     fontSize: 14,
     color: "black",
+    includeFontPadding: false,
   },
 });

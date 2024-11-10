@@ -46,6 +46,7 @@ const styles = StyleSheet.create({
     textShadowOffset: { width: 1, height: 1 },
     textShadowRadius: 3,
     textShadowColor: "#212121",
+    includeFontPadding: false,
   },
   location: {
     fontSize: 16,
@@ -53,5 +54,6 @@ const styles = StyleSheet.create({
     textShadowOffset: { width: 1, height: 1 },
     textShadowRadius: 3,
     textShadowColor: "#212121",
+    includeFontPadding: false,
   },
 });

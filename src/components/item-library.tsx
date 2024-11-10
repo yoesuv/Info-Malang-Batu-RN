@@ -30,13 +30,16 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontFamily: "Poppins-Bold",
     color: "black",
+    includeFontPadding: false,
   },
   textLink: {
     fontSize: 14,
     color: THEME_COLOR,
+    includeFontPadding: false,
   },
   textLicense: {
     fontSize: 12,
     color: "#757575",
+    includeFontPadding: false,
   },
 });

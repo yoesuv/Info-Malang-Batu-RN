@@ -50,11 +50,13 @@ const styles = StyleSheet.create({
     marginTop: 8,
     marginLeft: 8,
     marginRight: 8,
+    includeFontPadding: false,
   },
   textDescription: {
     fontSize: 16,
     marginTop: 8,
     marginLeft: 8,
     marginRight: 8,
+    includeFontPadding: false,
   },
 });

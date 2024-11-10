@@ -27,5 +27,6 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontFamily: "Pacifico",
     color: "white",
+    includeFontPadding: false,
   },
 });

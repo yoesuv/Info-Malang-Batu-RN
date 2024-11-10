@@ -25,9 +25,11 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontFamily: "Poppins-Bold",
     color: "black",
+    includeFontPadding: false,
   },
   versionInfo: {
     fontSize: 14,
     color: "#424242",
+    includeFontPadding: false,
   },
 });
