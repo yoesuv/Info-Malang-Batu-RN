@@ -53,12 +53,12 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 20,
-    fontWeight: "bold",
+    fontFamily: "Pacifico",
     color: "white",
   },
   textName: {
     fontSize: 20,
-    fontWeight: "bold",
+    fontFamily: "Poppins-Bold",
     marginTop: 8,
     marginLeft: 8,
     marginRight: 8,

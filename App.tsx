@@ -13,6 +13,8 @@ const queryClient = new QueryClient();
 
 export default function App() {
   const [loaded] = useFonts({
+    Pacifico: require("./assets/fonts/Pacifico.ttf"),
+    "Poppins-Bold": require("./assets/fonts/Poppins-Bold.ttf"),
     "Poppins-Regular": require("./assets/fonts/Poppins-Regular.ttf"),
   });
 

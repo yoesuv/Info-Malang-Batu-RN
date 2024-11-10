@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 20,
-    fontWeight: "bold",
+    fontFamily: "Pacifico",
     color: "white",
   },
   map: {

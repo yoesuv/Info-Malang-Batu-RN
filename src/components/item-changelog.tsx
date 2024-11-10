@@ -1,31 +1,33 @@
 import { StyleSheet, View } from "react-native";
-import { Text } from 'react-native-paper';
+import { Text } from "react-native-paper";
 
 interface TIChangelog {
-    name: string;
-    info: string;
+  name: string;
+  info: string;
 }
 
-export function ItemChangelog({name, info}: TIChangelog) {
-    return <View style={styles.container}>
-        <Text style={styles.versionName}>{ name }</Text>
-        <Text style={styles.versionInfo}>{ info }</Text>
+export function ItemChangelog({ name, info }: TIChangelog) {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.versionName}>{name}</Text>
+      <Text style={styles.versionInfo}>{info}</Text>
     </View>
+  );
 }
 
 const styles = StyleSheet.create({
-    container: {
-        width: '100%',
-        paddingHorizontal: 16,
-        paddingVertical: 8,
-    },
-    versionName: {
-        fontSize: 16,
-        fontWeight: 'bold',
-        color: 'black',
-    },
-    versionInfo: {
-        fontSize: 14,
-        color: '#424242',
-    },
+  container: {
+    width: "100%",
+    paddingHorizontal: 16,
+    paddingVertical: 8,
+  },
+  versionName: {
+    fontSize: 16,
+    fontFamily: "Poppins-Bold",
+    color: "black",
+  },
+  versionInfo: {
+    fontSize: 14,
+    color: "#424242",
+  },
 });

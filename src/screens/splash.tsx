@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
   },
   textSplash: {
     color: "white",
-    fontWeight: "bold",
     fontSize: 28,
+    fontFamily: "Pacifico",
   },
 });
