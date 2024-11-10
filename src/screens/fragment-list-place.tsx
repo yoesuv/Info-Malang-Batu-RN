@@ -1,14 +1,14 @@
 import { FlashList } from "@shopify/flash-list";
 import { StyleSheet, View } from "react-native";
-import { ActivityIndicator, Appbar } from "react-native-paper";
+import { ActivityIndicator } from "react-native-paper";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { useNavigation } from "@react-navigation/native";
 
 import ItemPlace from "../components/item-place";
-import { THEME_COLOR } from "../data/colors";
 import { PlaceModel } from "../models/place-model";
 import UseListPlace from "../services/list-place-service";
 import { RootStackParamList } from "./root-stack-params";
+import AppBarHeader from "../components/app-bar-header";
 
 type homeScreenProp = StackNavigationProp<RootStackParamList, "Home">;
 
@@ -17,13 +17,7 @@ export default function FragmentListPlace() {
 
   return (
     <View style={styles.container}>
-      <Appbar.Header
-        mode="small"
-        statusBarHeight={0}
-        style={{ backgroundColor: THEME_COLOR }}
-      >
-        <Appbar.Content title="List Place" titleStyle={styles.title} />
-      </Appbar.Header>
+      <AppBarHeader title="List Place" />
       {isLoading && <LoadingView />}
       {isSuccess && <ListPlaceView places={data} />}
     </View>
@@ -72,10 +66,5 @@ const styles = StyleSheet.create({
   },
   contentList: {
     flex: 1,
-  },
-  title: {
-    fontSize: 20,
-    fontFamily: "Pacifico",
-    color: "white",
   },
 });

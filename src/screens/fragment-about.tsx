@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { StyleSheet, View, Dimensions } from "react-native";
-import { Appbar } from "react-native-paper";
 import { SceneMap, TabView, TabBar } from "react-native-tab-view";
 import { THEME_COLOR } from "../data/colors";
 import TabChangelog from "./tabs/tab-changelog";
 import TabInformation from "./tabs/tab-information";
 import TabLibraries from "./tabs/tab-libraries";
 import TabThanks from "./tabs/tab-thanks";
+import AppBarHeader from "../components/app-bar-header";
 
 export default function FragmentAbout() {
   const [index, setIndex] = useState(0);
@@ -37,13 +37,7 @@ export default function FragmentAbout() {
 
   return (
     <View style={styles.container}>
-      <Appbar.Header
-        mode="small"
-        statusBarHeight={0}
-        style={{ backgroundColor: THEME_COLOR }}
-      >
-        <Appbar.Content title="About" titleStyle={styles.title} />
-      </Appbar.Header>
+      <AppBarHeader title="About" />
       <TabView
         initialLayout={{ width: Dimensions.get("window").width }}
         navigationState={{ index, routes }}
@@ -60,10 +54,5 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "column",
     backgroundColor: "white",
-  },
-  title: {
-    fontSize: 20,
-    fontFamily: "Pacifico",
-    color: "white",
   },
 });

@@ -1,11 +1,11 @@
 import { StyleSheet, View, Image } from "react-native";
-import { Text, Appbar } from "react-native-paper";
+import { Text } from "react-native-paper";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { useNavigation, useRoute, RouteProp } from "@react-navigation/native";
 
-import { THEME_COLOR } from "../data/colors";
 import { RootStackParamList } from "./root-stack-params";
+import AppBarHeader from "../components/app-bar-header";
 
 type detailGalleryScreenProp = StackNavigationProp<
   RootStackParamList,
@@ -23,14 +23,7 @@ export default function DetailGalleryScreen() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Appbar.Header
-        mode="small"
-        statusBarHeight={0}
-        style={{ backgroundColor: THEME_COLOR }}
-      >
-        <Appbar.BackAction color="white" onPress={pressBack} />
-        <Appbar.Content title="Detail Gallery" titleStyle={styles.title} />
-      </Appbar.Header>
+      <AppBarHeader title="Detail Gallery" pressBack={pressBack} />
       <View style={styles.containerImage}>
         <Image source={{ uri: params.image }} style={styles.containerImage} />
       </View>
@@ -44,11 +37,6 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "column",
     backgroundColor: "white",
-  },
-  title: {
-    fontSize: 20,
-    fontFamily: "Pacifico",
-    color: "white",
   },
   containerImage: {
     width: "100%",

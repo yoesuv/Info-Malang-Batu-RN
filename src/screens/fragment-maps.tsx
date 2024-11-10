@@ -1,13 +1,13 @@
 import { StyleSheet, View } from "react-native";
-import { Appbar, ActivityIndicator } from "react-native-paper";
+import { ActivityIndicator } from "react-native-paper";
 import MapView, { Marker, PROVIDER_GOOGLE } from "react-native-maps";
 import { useAssets } from "expo-asset";
 
-import { THEME_COLOR } from "../data/colors";
 import { DEFAULT_LATITUDE, DEFAULT_LONGITUDE } from "../data/constants";
 import { MAP_STYLE } from "../data/maps-style";
 import UsePins from "../services/pin-service";
 import { PinModel } from "../models/pin-model";
+import AppBarHeader from "../components/app-bar-header";
 
 interface TIDataPins {
   pins: PinModel[];
@@ -18,13 +18,7 @@ export default function FragmentMaps() {
 
   return (
     <View style={styles.container}>
-      <Appbar.Header
-        mode="small"
-        statusBarHeight={0}
-        style={{ backgroundColor: THEME_COLOR }}
-      >
-        <Appbar.Content title="Maps" titleStyle={styles.title} />
-      </Appbar.Header>
+      <AppBarHeader title="Maps" />
       {isLoading && <LoadingView />}
       {isSuccess && <MapsPinView pins={data} />}
     </View>
@@ -81,11 +75,6 @@ const styles = StyleSheet.create({
   contentLoading: {
     flex: 1,
     justifyContent: "center",
-  },
-  title: {
-    fontSize: 20,
-    fontFamily: "Pacifico",
-    color: "white",
   },
   map: {
     width: "100%",
