@@ -1,6 +1,7 @@
 import { FlashList } from "@shopify/flash-list";
 import { StyleSheet, View } from "react-native";
 import { ActivityIndicator } from "react-native-paper";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { useNavigation } from "@react-navigation/native";
 
@@ -9,6 +10,7 @@ import { PlaceModel } from "../models/place-model";
 import UseListPlace from "../services/list-place-service";
 import { RootStackParamList } from "./root-stack-params";
 import AppBarHeader from "../components/app-bar-header";
+import { THEME_COLOR } from "../data/colors";
 
 type homeScreenProp = StackNavigationProp<RootStackParamList, "Home">;
 
@@ -16,11 +18,13 @@ export default function FragmentListPlace() {
   const { data, isLoading, isSuccess } = UseListPlace();
 
   return (
-    <View style={styles.container}>
-      <AppBarHeader title="List Place" />
-      {isLoading && <LoadingView />}
-      {isSuccess && <ListPlaceView places={data} />}
-    </View>
+    <SafeAreaView style={styles.containerSafeArea} edges={["top"]}>
+      <View style={styles.container}>
+        <AppBarHeader title="List Place" />
+        {isLoading && <LoadingView />}
+        {isSuccess && <ListPlaceView places={data} />}
+      </View>
+    </SafeAreaView>
   );
 }
 
@@ -55,9 +59,12 @@ const ListPlaceView = ({ places }: { places: PlaceModel[] }) => {
 };
 
 const styles = StyleSheet.create({
+  containerSafeArea: {
+    flex: 1,
+    backgroundColor: THEME_COLOR,
+  },
   container: {
     flex: 1,
-    flexDirection: "column",
     backgroundColor: "white",
   },
   contentLoading: {
