@@ -6,6 +6,7 @@ import { useNavigation, useRoute, RouteProp } from "@react-navigation/native";
 
 import { RootStackParamList } from "./root-stack-params";
 import AppBarHeader from "../components/app-bar-header";
+import { THEME_COLOR } from "../data/colors";
 
 type detailPlaceScreenProp = StackNavigationProp<
   RootStackParamList,
@@ -22,21 +23,29 @@ export default function DetailListPlaceScreen() {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
-      <AppBarHeader title="Detail Place" pressBack={pressBack} />
-      <View style={styles.containerImage}>
-        <Image source={{ uri: params.gambar }} style={styles.containerImage} />
+    <SafeAreaView style={styles.containerSafeArea}>
+      <View style={styles.container}>
+        <AppBarHeader title="Detail Place" pressBack={pressBack} />
+        <View style={styles.containerImage}>
+          <Image
+            source={{ uri: params.gambar }}
+            style={styles.containerImage}
+          />
+        </View>
+        <Text style={styles.textName}>{params.nama}</Text>
+        <Text style={styles.textDescription}>{params.deskripsi}</Text>
       </View>
-      <Text style={styles.textName}>{params.nama}</Text>
-      <Text style={styles.textDescription}>{params.deskripsi}</Text>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
+  containerSafeArea: {
+    flex: 1,
+    backgroundColor: THEME_COLOR,
+  },
   container: {
     flex: 1,
-    flexDirection: "column",
     backgroundColor: "white",
   },
   containerImage: {
