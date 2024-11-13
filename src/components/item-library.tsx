@@ -38,7 +38,8 @@ const styles = StyleSheet.create({
     includeFontPadding: false,
   },
   textLicense: {
-    fontSize: 12,
+    fontSize: 11,
+    fontFamily: "SometypeMono",
     color: "#757575",
     includeFontPadding: false,
   },

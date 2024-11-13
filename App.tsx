@@ -16,6 +16,7 @@ export default function App() {
     Pacifico: require("./assets/fonts/Pacifico.ttf"),
     "Poppins-Bold": require("./assets/fonts/Poppins-Bold.ttf"),
     "Poppins-Regular": require("./assets/fonts/Poppins-Regular.ttf"),
+    SometypeMono: require("./assets/fonts/SometypeMono.ttf"),
   });
 
   const baseFont = {
