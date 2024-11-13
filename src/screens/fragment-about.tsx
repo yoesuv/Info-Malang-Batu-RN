@@ -32,7 +32,7 @@ export default function FragmentAbout() {
       indicatorStyle={{ backgroundColor: "white", height: 4 }}
       style={{ backgroundColor: THEME_COLOR }}
       tabStyle={{ width: "auto" }}
-      labelStyle={{ fontSize: 16, textTransform: "none" }}
+      labelStyle={styles.label}
     />
   );
 
@@ -61,5 +61,11 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "column",
     backgroundColor: "white",
+  },
+  label: {
+    fontSize: 14,
+    textTransform: "none",
+    fontFamily: "Poppins-Regular",
+    includeFontPadding: false,
   },
 });
