@@ -23,7 +23,7 @@ export default function DetailListPlaceScreen() {
   };
 
   return (
-    <SafeAreaView style={styles.containerSafeArea}>
+    <SafeAreaView style={styles.containerSafeArea} edges={["top"]}>
       <View style={styles.container}>
         <AppBarHeader title="Detail Place" pressBack={pressBack} />
         <View style={styles.containerImage}>

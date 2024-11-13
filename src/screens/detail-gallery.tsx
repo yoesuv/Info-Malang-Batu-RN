@@ -6,6 +6,7 @@ import { useNavigation, useRoute, RouteProp } from "@react-navigation/native";
 
 import { RootStackParamList } from "./root-stack-params";
 import AppBarHeader from "../components/app-bar-header";
+import { THEME_COLOR } from "../data/colors";
 
 type detailGalleryScreenProp = StackNavigationProp<
   RootStackParamList,
@@ -22,17 +23,23 @@ export default function DetailGalleryScreen() {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
-      <AppBarHeader title="Detail Gallery" pressBack={pressBack} />
-      <View style={styles.containerImage}>
-        <Image source={{ uri: params.image }} style={styles.containerImage} />
+    <SafeAreaView style={styles.containerSafeArea} edges={["top"]}>
+      <View style={styles.container}>
+        <AppBarHeader title="Detail Gallery" pressBack={pressBack} />
+        <View style={styles.containerImage}>
+          <Image source={{ uri: params.image }} style={styles.containerImage} />
+        </View>
+        <Text style={styles.textDescription}>{params.caption}</Text>
       </View>
-      <Text style={styles.textDescription}>{params.caption}</Text>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
+  containerSafeArea: {
+    flex: 1,
+    backgroundColor: THEME_COLOR,
+  },
   container: {
     flex: 1,
     flexDirection: "column",

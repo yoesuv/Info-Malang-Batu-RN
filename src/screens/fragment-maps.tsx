@@ -1,5 +1,6 @@
 import { StyleSheet, View } from "react-native";
 import { ActivityIndicator } from "react-native-paper";
+import { SafeAreaView } from "react-native-safe-area-context";
 import MapView, { Marker, PROVIDER_GOOGLE } from "react-native-maps";
 import { useAssets } from "expo-asset";
 
@@ -8,6 +9,7 @@ import { MAP_STYLE } from "../data/maps-style";
 import UsePins from "../services/pin-service";
 import { PinModel } from "../models/pin-model";
 import AppBarHeader from "../components/app-bar-header";
+import { THEME_COLOR } from "../data/colors";
 
 interface TIDataPins {
   pins: PinModel[];
@@ -17,11 +19,13 @@ export default function FragmentMaps() {
   const { data, isLoading, isSuccess } = UsePins();
 
   return (
-    <View style={styles.container}>
-      <AppBarHeader title="Maps" />
-      {isLoading && <LoadingView />}
-      {isSuccess && <MapsPinView pins={data} />}
-    </View>
+    <SafeAreaView style={styles.containerSafeArea} edges={["top"]}>
+      <View style={styles.container}>
+        <AppBarHeader title="Maps" />
+        {isLoading && <LoadingView />}
+        {isSuccess && <MapsPinView pins={data} />}
+      </View>
+    </SafeAreaView>
   );
 }
 
@@ -67,6 +71,10 @@ const MapsPinView = ({ pins }: TIDataPins) => {
 };
 
 const styles = StyleSheet.create({
+  containerSafeArea: {
+    flex: 1,
+    backgroundColor: THEME_COLOR,
+  },
   container: {
     flex: 1,
     flexDirection: "column",
