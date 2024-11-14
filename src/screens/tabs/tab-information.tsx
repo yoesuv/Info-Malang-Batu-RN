@@ -27,11 +27,13 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 18,
-    fontWeight: "bold",
+    fontFamily: "Poppins-Bold",
     color: "black",
+    includeFontPadding: false,
   },
   content: {
     color: "black",
     fontSize: 16,
+    includeFontPadding: false,
   },
 });

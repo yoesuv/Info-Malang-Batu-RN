@@ -2,7 +2,7 @@
   "expo": {
     "name": "Info-Malang-Batu",
     "slug": "Info-Malang-Batu",
-    "version": "2.0.2",
+    "version": "2.1.0",
     "android.versionCode": "1",
     "ios.buildNumber": "1",
     "orientation": "portrait",
@@ -39,6 +39,20 @@
       "eas": {
         "projectId": "0041a1ae-5f19-45ef-99d4-bb8b8893aa15"
       }
-    }
+    },
+    "plugins": [
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/Pacifico.ttf",
+            "./assets/fonts/Poppins-Bold.ttf",
+            "./assets/fonts/Poppins-Regular.ttf",
+            "./assets/fonts/SometypeMono.ttf"
+          ]
+        }
+      ],
+      "expo-asset"
+    ]
   }
 }
