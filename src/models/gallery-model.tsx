@@ -1,5 +1,5 @@
 export interface GalleryModel {
-    caption:   string;
-    thumbnail: string;
-    image:     string;
+  caption: string;
+  thumbnail: string;
+  image: string;
 }

@@ -1,20 +1,44 @@
-import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import {
+  configureFonts,
+  MD3LightTheme as DefaultTheme,
+  Provider as PaperProvider,
+} from "react-native-paper";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
-import AppNavigation from './src/navigations';
-import { THEME_COLOR } from './src/data/colors';
+import AppNavigation from "./src/navigations";
+import { THEME_COLOR } from "./src/data/colors";
+import { useFonts } from "expo-font";
 
 const queryClient = new QueryClient();
-const theme = {
-  ...DefaultTheme,
-  colors: {
-    ...DefaultTheme.colors,
-    primary: THEME_COLOR,
-    accent: 'yellow',
-  }
-}
 
 export default function App() {
+  const [loaded] = useFonts({
+    Pacifico: require("./assets/fonts/Pacifico.ttf"),
+    "Poppins-Bold": require("./assets/fonts/Poppins-Bold.ttf"),
+    "Poppins-Regular": require("./assets/fonts/Poppins-Regular.ttf"),
+    SometypeMono: require("./assets/fonts/SometypeMono.ttf"),
+  });
+
+  const baseFont = {
+    fontFamily: "Poppins-Regular",
+  } as const;
+
+  const baseVariants = configureFonts({ config: baseFont });
+
+  const theme = {
+    ...DefaultTheme,
+    fonts: configureFonts({ config: { ...baseVariants } }),
+    colors: {
+      ...DefaultTheme.colors,
+      primary: THEME_COLOR,
+      accent: "yellow",
+    },
+  };
+
+  if (!loaded) {
+    return null;
+  }
+
   return (
     <PaperProvider theme={theme}>
       <QueryClientProvider client={queryClient}>
