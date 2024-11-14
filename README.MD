@@ -10,7 +10,7 @@ v18.19.1        | java 17.0.11 2024-04-16 LTS
 * :arrow_up: update libraries
 
 Build from [Expo Framework](https://expo.dev/), click [here](https://github.com/yoesuv/Info-Malang-Batu) for Android Native version.  
-Download apk file [here](https://e.pcloud.link/publink/show?code=XZn1uxZ26QUXIyN9OVCfiEhVPEe1Vgq7H3)
+Download apk file [here](https://e.pcloud.link/publink/show?code=XZn1uxZ26QUXIyN9OVCfiEhVPEe1Vgq7H3V)
 
 #### Screenshot ####
 | ![](https://i.imgur.com/0ezpBvi.png) | ![](https://i.imgur.com/ukhbFbZ.png) | ![](https://i.imgur.com/ZiZoG9O.png) | ![](https://i.imgur.com/VeEKF07.png) |
