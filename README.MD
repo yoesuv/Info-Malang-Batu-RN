@@ -2,12 +2,8 @@
 
 ```
 Node js version | Java Version
-v18.19.1        | java 17.0.11 2024-04-16 LTS
+v20.3.1         | java 21.0.2 2024-01-16 LTS
 ```
-
-#### Whats new? #####
-* :art: use custom fonts
-* :arrow_up: update libraries
 
 Build from [Expo Framework](https://expo.dev/), click [here](https://github.com/yoesuv/Info-Malang-Batu) for Android Native version.  
 Download apk file [here](https://e.pcloud.link/publink/show?code=XZn1uxZ26QUXIyN9OVCfiEhVPEe1Vgq7H3V)
