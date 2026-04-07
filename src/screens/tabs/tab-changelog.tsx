@@ -13,7 +13,7 @@ export default function TabChangelog() {
           <ItemChangelog name={item.versionName} info={item.versionInfo} />
         )}
         keyExtractor={(item, index) => index.toString()}
-        ItemSeparatorComponent={(item, index) => <Divider />}
+        ItemSeparatorComponent={() => <Divider />}
       />
     </View>
   );
