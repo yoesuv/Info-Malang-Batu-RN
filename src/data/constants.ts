@@ -3,6 +3,10 @@ export const DEFAULT_LONGITUDE = 112.653369;
 
 export const APP_CHANGELOG = [
   {
+    versionName: "Version 2.1.1",
+    versionInfo: "• update libraries",
+  },
+  {
     versionName: "Version 2.1.0",
     versionInfo: "• custom fonts\n• update libraries",
   },

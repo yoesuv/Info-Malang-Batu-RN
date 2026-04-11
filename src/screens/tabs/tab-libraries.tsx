@@ -17,7 +17,7 @@ export default function TabLibraries() {
           />
         )}
         keyExtractor={(item, index) => index.toString()}
-        ItemSeparatorComponent={(item, index) => <Divider />}
+        ItemSeparatorComponent={() => <Divider />}
       />
     </View>
   );
